@@ -1,0 +1,561 @@
+fileFormatVersion: 2
+guid: e695a6737f288ac4eae8d2ca61bce72e
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Stone-GreenP_4k_0
+    21300002: Stone-GreenP_4k_2
+    21300004: Stone-GreenP_4k_3
+    21300006: Stone-GreenP_4k_4
+    21300008: Stone-GreenP_4k_5
+    21300010: Stone-GreenP_4k_1
+    21300012: Stone-GreenP_4k_6
+    21300014: Stone-GreenP_4k_14
+    21300016: Stone-GreenP_4k_16
+    21300018: Stone-GreenP_4k_17
+    21300020: Stone-GreenP_4k_18
+    21300022: Stone-GreenP_4k_20
+    21300024: Stone-GreenP_4k_15
+    21300026: Stone-GreenP_4k_21
+    21300028: Stone-GreenP_4k_7
+    21300030: Stone-GreenP_4k_11
+    21300032: Stone-GreenP_4k_12
+    21300034: Stone-GreenP_4k_10
+    21300036: Stone-GreenP_4k_9
+    21300038: Stone-GreenP_4k_19
+    21300040: Stone-GreenP_4k_8
+    21300042: Stone-GreenP_4k_13
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 4096
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: 16
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 400
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Stone-GreenP_4k_0
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 3388
+        width: 1272
+        height: 646
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 81, y: 66, z: 70, w: 81}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a28f701acb121774587e370e6a94a1b9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stone-GreenP_4k_2
+      rect:
+        serializedVersion: 2
+        x: 1367
+        y: 2764
+        width: 1265
+        height: 1265
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 68, y: 69, z: 76, w: 83}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d2c35da6b7287d4e9ae9f70ab990776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stone-GreenP_4k_3
+      rect:
+        serializedVersion: 2
+        x: 2666
+        y: 2759
+        width: 644
+        height: 1274
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 81, y: 70, z: 66, w: 89}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dac584e0885b75047a84fdc36b480799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stone-GreenP_4k_4
+      rect:
+        serializedVersion: 2
+        x: 3342
+        y: 2757
+        width: 325
+        height: 1276
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 78, y: 76, z: 66, w: 82}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e40c6d5a730cf5647af0e751fd765d68
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stone-GreenP_4k_5
+      rect:
+        serializedVersion: 2
+        x: 3695
+        y: 3703
+        width: 329
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 65, y: 57, z: 65, w: 57}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b06fcf794dba9ed4eb1afc4b3e99e183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stone-GreenP_4k_1
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 3048
+        width: 1274
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 81, y: 61, z: 76, w: 77}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 013ea2af8cb1dfc4ab2a3404fdd2c1f4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stone-GreenP_4k_6
+      rect:
+        serializedVersion: 2
+        x: 3698
+        y: 3348
+        width: 328
+        height: 332
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7990469a9f2a3874f90b2b5314ee622b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stone-GreenP_4k_14
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 730
+        width: 1277
+        height: 323
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 79, y: 78, z: 71, w: 68}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4175b03384432d847bf1a3aabee229b3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stone-GreenP_4k_16
+      rect:
+        serializedVersion: 2
+        x: 1367
+        y: 73
+        width: 1265
+        height: 1265
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 73, y: 80, z: 64, w: 73}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cbab34331aefba46bebaf271ee0bf9e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stone-GreenP_4k_17
+      rect:
+        serializedVersion: 2
+        x: 2663
+        y: 69
+        width: 647
+        height: 1274
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 79, y: 86, z: 72, w: 69}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 490080df88041e1468fdfc3808d7bfcf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stone-GreenP_4k_18
+      rect:
+        serializedVersion: 2
+        x: 3341
+        y: 68
+        width: 326
+        height: 1276
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 74, y: 79, z: 58, w: 67}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 625292a2dce622a49818e73af335cdc8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stone-GreenP_4k_20
+      rect:
+        serializedVersion: 2
+        x: 3701
+        y: 421
+        width: 328
+        height: 332
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 943c7d040cfcf8140ac08f80c7526ce9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stone-GreenP_4k_15
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 71
+        width: 1272
+        height: 642
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 81, y: 74, z: 74, w: 67}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 223ef33fd9c08ff4fb4ad11ef8ed2293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stone-GreenP_4k_21
+      rect:
+        serializedVersion: 2
+        x: 3695
+        y: 70
+        width: 332
+        height: 329
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 66, y: 54, z: 65, w: 54}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34f94c34ebf0e904aaff9868f77f7b5d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stone-GreenP_4k_7
+      rect:
+        serializedVersion: 2
+        x: 3712
+        y: 2904
+        width: 261
+        height: 412
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6b841e0e6c732b43896832627b0c61d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stone-GreenP_4k_11
+      rect:
+        serializedVersion: 2
+        x: 3402
+        y: 2105
+        width: 629
+        height: 631
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5741d199ac2cf99459ed871bfc9a0508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stone-GreenP_4k_12
+      rect:
+        serializedVersion: 2
+        x: 3400
+        y: 1366
+        width: 629
+        height: 631
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29dbcc4a565a07c44b2a5c0be02aab87
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stone-GreenP_4k_10
+      rect:
+        serializedVersion: 2
+        x: 2133
+        y: 1374
+        width: 1225
+        height: 1223
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a8b9b677872d5d4998b9dc266b1fd2b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stone-GreenP_4k_9
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 1502
+        width: 1228
+        height: 1226
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99714c285648cff459e8e86081a0eba2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stone-GreenP_4k_19
+      rect:
+        serializedVersion: 2
+        x: 3706
+        y: 786
+        width: 269
+        height: 414
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab87e024970a3434b933aca033a3a9c0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stone-GreenP_4k_8
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 2686
+        width: 338
+        height: 339
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a358a5df4fe04dd48ae4d752d483e038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stone-GreenP_4k_13
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 1081
+        width: 338
+        height: 336
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa077a2583efe94478a6d7a09d545c2a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
