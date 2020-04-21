@@ -9,9 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/MainScreen.unity
     guid: 43ff31be6e39df64bbd62c361e4b1e19
   - enabled: 1
+<<<<<<< HEAD
     path: Assets/Scenes/Ending.unity
     guid: a459b1f37e836d24e9fc8d9fb2ccc1db
   - enabled: 1
+=======
+>>>>>>> remotes/origin/master
     path: Assets/Scenes/Loading.unity
     guid: 472d99044b68d504c9b67f1ae01c98fc
   - enabled: 1
