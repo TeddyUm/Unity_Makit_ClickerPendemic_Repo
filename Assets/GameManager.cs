@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public int doller = 0;
     public int playerDamage = 10;
     public int followerDamage = 0;
-
+    public int currentScene = 0;
     private void Awake()
     {
         if(null == instance)
@@ -44,6 +44,11 @@ public class GameManager : MonoBehaviour
             }
             return instance;
         }
+    }
+
+    public void SceneChange(string levelName)
+    {
+        SceneManager.LoadScene(levelName);
     }
 }
 

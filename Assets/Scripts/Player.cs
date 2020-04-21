@@ -7,8 +7,8 @@ public class Player : MonoBehaviour
 {
     public BoxCollider2D touch;
     public GameObject textObj;
+    public Enemy enemy;
     GameManager gm;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +26,7 @@ public class Player : MonoBehaviour
             if (rayHit.collider == touch && Input.GetMouseButtonDown(0))
             {
                 Instantiate(textObj, new Vector2(Screen.width / 2, Screen.height / 2), Quaternion.identity);
-                
+                enemy.SetEnemyHP(enemy.getEnemyHP() - GameManager.Instance.playerDamage);
             }
         }
     }
