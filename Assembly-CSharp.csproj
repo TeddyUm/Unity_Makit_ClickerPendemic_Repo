@@ -71,6 +71,7 @@
     <Compile Include="Assets\Scripts\MainUI.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\SceneLoad.cs" />
+    <Compile Include="Assets\Scripts\SoundManager.cs" />
     <Compile Include="Assets\Scripts\Stage1UI.cs" />
     <None Include="Assets\Images\Items\Shader\SH Sprite Icon Outline Color.shader" />
     <None Include="Assets\Images\Royal UI\RoyalUI\readme.txt" />

@@ -38,18 +38,6 @@ public class BtnType : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 Debug.Log("Credits");
                 break;
 
-            case BTNType.Sound:
-                if (isSound)
-                {
-                    Debug.Log("Sound OFF");
-                }
-                else
-                {
-                    Debug.Log("Sound ON");
-                }
-                isSound = !isSound;
-                break;
-
             case BTNType.Back:
                 Debug.Log("Back");
                 CanvasGroupOn(mainGroup);

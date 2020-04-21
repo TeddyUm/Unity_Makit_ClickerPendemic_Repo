@@ -10,7 +10,6 @@ public enum BTNType
     Credits,
     
     // Option
-    Sound,
     Back,
 
     Quit
