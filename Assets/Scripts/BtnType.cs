@@ -9,11 +9,15 @@ public class BtnType : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public BTNType currentType;
     public Transform buttoneScale;
     Vector3 defaultScale;
+    public CanvasGroup mainGroup;
+    public CanvasGroup optionGroup;
 
     private void Start()
     {
         defaultScale = buttoneScale.localScale;
     }
+
+    bool isSound;
 
     public void OnBtnClick()
     {
@@ -21,12 +25,13 @@ public class BtnType : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         {
             case BTNType.Start:
                 Debug.Log("Start");
-
-                SceneManager.LoadScene("Loading");
+                SceneLoad.LoadSceneHandle("Play", 0);
                 break;
 
             case BTNType.Option:
                 Debug.Log("Option");
+                CanvasGroupOn(optionGroup);
+                CanvasGroupOff(mainGroup);
                 break;
 
             case BTNType.Credits:
@@ -34,17 +39,41 @@ public class BtnType : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 break;
 
             case BTNType.Sound:
-                Debug.Log("Sound");
+                if (isSound)
+                {
+                    Debug.Log("Sound OFF");
+                }
+                else
+                {
+                    Debug.Log("Sound ON");
+                }
+                isSound = !isSound;
                 break;
 
             case BTNType.Back:
                 Debug.Log("Back");
+                CanvasGroupOn(mainGroup);
+                CanvasGroupOff(optionGroup); 
                 break;
 
             case BTNType.Quit:
+                Application.Quit();
                 Debug.Log("Quit");
                 break;
         }
+    }
+    public void CanvasGroupOn(CanvasGroup cg)
+    {
+        cg.alpha = 1;
+        cg.interactable = true;
+        cg.blocksRaycasts = true;
+    }
+
+    public void CanvasGroupOff(CanvasGroup cg)
+    {
+        cg.alpha = 0;
+        cg.interactable = false;
+        cg.blocksRaycasts = false;
     }
 
     public void OnPointerEnter(PointerEventData eventData)
