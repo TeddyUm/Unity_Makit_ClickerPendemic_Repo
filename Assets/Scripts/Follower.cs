@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Follower : MonoBehaviour
 {
+    public Enemy enemy;
     // Start is called before the first frame update
     void Start()
     {

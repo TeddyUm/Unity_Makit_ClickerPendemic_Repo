@@ -7,11 +7,17 @@ public class GameManager : MonoBehaviour
 {
     private static GameManager instance = null;
 
-    public int population = 1000000000;
-    public int doller = 0;
-    public int playerDamage = 10;
-    public int followerDamage = 0;
+    // main data
+    public int population = 1000000000; // time
+    public int money = 0;               // money
+    public int playerDamage = 10;       // damage
+    public int follower1Damage = 10;    // follower1 damage
+    public int follower2Damage = 100;   // follower2 damage
+    public int follower3Damage = 1000;  // follower3 damage
+    public int follower4Damage = 10000; // follower4 damage
+    public int currentScene = 0;        // scene number
 
+    // Don't destroy
     private void Awake()
     {
         if(null == instance)
@@ -25,15 +31,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public int getPlayerDamage()
-    {
-        return playerDamage;
-    }
-    public void setPlayerDamage(int addDamage)
-    {
-        playerDamage += addDamage;
-    }
-
+    // singleton
     public static GameManager Instance
     {
         get
@@ -44,6 +42,12 @@ public class GameManager : MonoBehaviour
             }
             return instance;
         }
+    }
+
+    // scene change function
+    public void SceneChange(string levelName)
+    {
+        SceneManager.LoadScene(levelName);
     }
 }
 
