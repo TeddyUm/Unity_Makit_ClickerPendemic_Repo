@@ -26,8 +26,9 @@ public class Enemy : MonoBehaviour
         {
             enemyMaxHP[i] = enemyHP[i];
         }
-        
-    GameManager.Instance.currentScene++;
+
+        GameManager.Instance.maxEnemyHP = enemyMaxHP[count];
+        GameManager.Instance.currentScene++;
     }
 
     // Update is called once per frame
@@ -40,12 +41,13 @@ public class Enemy : MonoBehaviour
         if(enemyHP[count] <= 0)
         {
             // Money
-            MoneyManager.money += 1000;
+            GameManager.Instance.money += 1000;
 
             // if enemy die, next enemy generate. timer reset
-            GameManager.Instance.population = 1000000000;
+            GameManager.Instance.population = 1000;
             enemyRenderer.sprite = sprites[count];
             count++;
+            GameManager.Instance.maxEnemyHP = enemyMaxHP[count];
 
             // if win 5 enemies, stage change
             if (count > 4)
@@ -73,7 +75,7 @@ public class Enemy : MonoBehaviour
         {
             count = 0;
             enemyRenderer.sprite = sprites[0];
-            GameManager.Instance.population = 1000000000;
+            GameManager.Instance.population = GameManager.Instance.maxPopul;
             for (int i = 0; i < 5; i++)
             {
                 enemyHP[i] = enemyMaxHP[i];
@@ -82,9 +84,10 @@ public class Enemy : MonoBehaviour
 
         // kill people! timer
         killTime += Time.deltaTime;
+
         if(killTime > 0.01f)
         {
-            GameManager.Instance.population -= 1000000;
+            GameManager.Instance.population -= 1;
             killTime = 0.0f;
         }
     }

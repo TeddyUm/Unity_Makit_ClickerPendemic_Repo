@@ -142,7 +142,7 @@ public class Skill : MonoBehaviour
     void Heal()
     {
         Instantiate(healObj, new Vector2(Screen.width / 2, Screen.height / 2), Quaternion.identity);
-        GameManager.Instance.population += (GameManager.Instance.playerDamage * 1000000);
+        GameManager.Instance.population += (100 * (1 + GameManager.Instance.currentScene));
     }
     void Money()
     {

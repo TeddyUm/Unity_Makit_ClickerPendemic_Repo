@@ -71,11 +71,11 @@
     <Compile Include="Assets\Scripts\Menu\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Menu\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\Menu\SceneLoad.cs" />
-    <Compile Include="Assets\Scripts\MoneyManager.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\Skill.cs" />
     <Compile Include="Assets\Scripts\SoundManager.cs" />
     <Compile Include="Assets\Scripts\Stage1UI.cs" />
+    <Compile Include="Assets\Scripts\UI_Shop.cs" />
     <None Include="Assets\Images\Items\Shader\SH Sprite Icon Outline Color.shader" />
     <None Include="Assets\Sounds\LoopAndMusicFree\_readme\readme_en_ver2.0.txt" />
     <None Include="Assets\Sounds\LoopAndMusicFree\_readme\readme_jp_ver2.0.txt" />
