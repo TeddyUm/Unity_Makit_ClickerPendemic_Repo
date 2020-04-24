@@ -7,9 +7,10 @@ public class Enemy : MonoBehaviour
 {
     // data
     public int[] enemyHP;                   // enemy HP
+    public string[] enemyName;              // enemy name
     public Sprite[] sprites;                // sprite enemy
     public Text hpNum;                      // enemy HP UI
-    private SpriteRenderer enemyRenderer;   
+    private SpriteRenderer enemyRenderer;   // enemy image renderer
     private int[] enemyMaxHP = new int[5];  // enemy max HP save 
     private int count;                      // order of enemies
     private float killTime = 0.0f;          // time limit timer
@@ -47,24 +48,30 @@ public class Enemy : MonoBehaviour
             GameManager.Instance.population = 1000;
             enemyRenderer.sprite = sprites[count];
             count++;
-            GameManager.Instance.maxEnemyHP = enemyMaxHP[count];
+            if(count < 5)
+             GameManager.Instance.maxEnemyHP = enemyMaxHP[count];
 
             // if win 5 enemies, stage change
             if (count > 4)
             {
+                // stage change action
                 switch(GameManager.Instance.currentScene)
                 {
                     case 1:
                         GameManager.Instance.SceneChange("Stage2");
+                        count = 0;
                         break;
                     case 2:
                         GameManager.Instance.SceneChange("Stage3");
+                        count = 0;
                         break;
                     case 3:
                         GameManager.Instance.SceneChange("Stage4");
+                        count = 0;
                         break;
                     case 4:
                         GameManager.Instance.SceneChange("Ending");
+                        count = 0;
                         break;
                 }
             }
@@ -99,5 +106,9 @@ public class Enemy : MonoBehaviour
     public int getEnemyHP()
     {
         return enemyHP[count];
+    }
+    public string getEnemyName()
+    {
+        return enemyName[count];
     }
 }

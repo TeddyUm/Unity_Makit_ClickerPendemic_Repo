@@ -10,6 +10,7 @@ public class DamageText : MonoBehaviour
     private float cTimer;   // alpha change
     public Text textObj;    // Damage Text
     public int skillnum = 0;
+    public Skill skill;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,15 +23,15 @@ public class DamageText : MonoBehaviour
         }
         else if (skillnum == 1) // population
         {
-            textObj.text = "+ population\n" + GameManager.Instance.playerDamage * 1000000;
+            textObj.text = "+ population\n" + GameManager.Instance.healSkill + "M";
         }
         else if (skillnum == 2) // money
         {
-            textObj.text = "+ money\n" + GameManager.Instance.playerDamage * 10;
+            textObj.text = "+ money\n" + GameManager.Instance.moneySkill;
         }
         else if (skillnum == 3) // new attack
         {
-            textObj.text = "" + GameManager.Instance.playerDamage * 10;
+            textObj.text = "+ Damage\n" + GameManager.Instance.damageSkill;
         }
         else if (skillnum == 4) // follower atk 1
         {
@@ -58,6 +59,11 @@ public class DamageText : MonoBehaviour
         textObj.transform.position = new Vector2(textObj.transform.position.x, textObj.transform.position.y + (Time.deltaTime * 30));
         textObj.color = new Color(textObj.color.r, textObj.color.g, textObj.color.b, 1.0f - cTimer);
         Destroy(gameObject, timer);
+
+        if(PauseMenu.GameIsPaused == true)
+        {
+            textObj.text = "";
+        }
     }
 
 }

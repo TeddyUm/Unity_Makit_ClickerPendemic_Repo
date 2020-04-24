@@ -7,25 +7,25 @@ public class UI_Shop : MonoBehaviour
 {
     public Text shop_Player_level;
     public Text shop_Player_Des;
-    public int shop_Player_amount;
+    static int shop_Player_amount = 1;
     public Text Player_money_text;
     public int shop_Player_price;
 
     public Text shop_Player_skill_1_level;
     public Text shop__Player_skill_1_Des;
-    public int shop__Player_skill_1_amount;
+    static int shop__Player_skill_1_amount = 1;
     public Text skill_1_money_text;
     public int shop__Player_skill_1_price;
 
     public Text shop_Player_skill_2_level;
     public Text shop__Player_skill_2_Des;
-    public int shop__Player_skill_2_amount;
+    static int shop__Player_skill_2_amount = 1;
     public Text skill_2_money_text;
     public int shop__Player_skill_2_price;
 
     public Text shop_Player_skill_3_level;
     public Text shop__Player_skill_3_Des;
-    public int shop__Player_skill_3_amount;
+    static int shop__Player_skill_3_amount = 1;
     public Text skill_3_money_text;
     public int shop__Player_skill_3_price;
 
@@ -57,7 +57,7 @@ public class UI_Shop : MonoBehaviour
 
             // Fix later
             shop_Player_price += 20;
-            // 각 스킬마다 올라가는 수 논의 필요.
+            GameManager.Instance.playerDamage += 10;
         }
     }
 
@@ -69,7 +69,7 @@ public class UI_Shop : MonoBehaviour
             shop__Player_skill_1_amount += 1;
             // Fix later
             shop__Player_skill_1_price += 30;
-            // skill 1 능력치 올리기
+            GameManager.Instance.damageSkill += 100;
         }
     }
 
@@ -81,7 +81,7 @@ public class UI_Shop : MonoBehaviour
             shop__Player_skill_2_amount += 1;
             // Fix later
             shop__Player_skill_2_price += 40;
-            // skill 2 능력치 올리기
+            GameManager.Instance.healSkill += 100;
         }
     }
 
@@ -93,7 +93,7 @@ public class UI_Shop : MonoBehaviour
             shop__Player_skill_3_amount += 1;
             // Fix later
             shop__Player_skill_3_price += 40;
-            // skill 3 능력치 올리기
+            GameManager.Instance.moneySkill += 100;
         }
     }
 }

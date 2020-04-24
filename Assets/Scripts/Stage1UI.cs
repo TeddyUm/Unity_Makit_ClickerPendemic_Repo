@@ -7,6 +7,7 @@ public class Stage1UI : MonoBehaviour
 {
     // Time UI TEXT
     public Text populNum;
+    public Text enemyName;
     public Enemy enemy;
     public Image populGuage;
     public Image enemyHPGuage;
@@ -39,5 +40,8 @@ public class Stage1UI : MonoBehaviour
         // enemy guage
         currentEnemyHP = enemy.getEnemyHP() / (float)GameManager.Instance.maxEnemyHP;
         enemyHPGuage.fillAmount = Mathf.Lerp(enemyHPGuage.fillAmount, currentEnemyHP, Time.deltaTime * 3);
+
+        // enemy name
+        enemyName.text = enemy.getEnemyName();
     }
 }

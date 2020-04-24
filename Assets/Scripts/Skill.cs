@@ -5,9 +5,11 @@ using UnityEngine.UI;
 
 public class Skill : MonoBehaviour
 {
+    // skill image, button and text
     public Image skillNews;
     public Image skillFund;
     public Image skillMedical;
+
     public Button buttonNews;
     public Button buttonFund;
     public Button buttonMedical;
@@ -17,10 +19,12 @@ public class Skill : MonoBehaviour
     public GameObject moneyObj;
     public Enemy enemy;
 
+    // skill cool time
     public float newsCooltime = 10.0f;
     public float fundCooltime = 10.0f;
     public float medicalCooltime = 10.0f;
 
+    // skill lifetime check
     private float newsLeftTime = 0;
     private float fundLeftTime = 0;
     private float medicalLeftTime = 0;
@@ -33,6 +37,7 @@ public class Skill : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // init skill func
         newsLeftTime = newsCooltime;
         newsIsClicked = true;
         if (buttonNews)
@@ -49,18 +54,18 @@ public class Skill : MonoBehaviour
             buttonMedical.enabled = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if(newsIsClicked)
+        // damage skill cooltime check and active
+        if (newsIsClicked)
         {
-            if(newsLeftTime> 0)
+            if (newsLeftTime > 0)
             {
                 newsLeftTime -= Time.deltaTime * speed;
-                if(newsLeftTime < 0)
+                if (newsLeftTime < 0)
                 {
                     newsLeftTime = 0;
-                    if(buttonNews)
+                    if (buttonNews)
                     {
                         buttonNews.enabled = true;
                     }
@@ -71,6 +76,7 @@ public class Skill : MonoBehaviour
                     skillNews.fillAmount = ratio;
             }
         }
+        // money skill cooltime check and active
         if (fundIsClicked)
         {
             if (fundLeftTime > 0)
@@ -90,6 +96,7 @@ public class Skill : MonoBehaviour
                     skillFund.fillAmount = ratio;
             }
         }
+        // heal skill cooltime check and active
         if (medicalIsClicked)
         {
             if (medicalLeftTime > 0)
@@ -110,6 +117,7 @@ public class Skill : MonoBehaviour
             }
         }
     }
+    // damage skill cooltime
     public void NewsStartCoolTime()
     {
         newsLeftTime = newsCooltime;
@@ -118,6 +126,7 @@ public class Skill : MonoBehaviour
             buttonNews.enabled = false;
         Damage();
     }
+    // money skill cooltime
     public void FundStartCoolTime()
     {
         fundLeftTime = fundCooltime;
@@ -126,6 +135,7 @@ public class Skill : MonoBehaviour
             buttonFund.enabled = false;
         Money();
     }
+    // heal skill cooltime
     public void MedStartCoolTime()
     {
         medicalLeftTime = medicalCooltime;
@@ -134,19 +144,27 @@ public class Skill : MonoBehaviour
             buttonMedical.enabled = false;
         Heal();
     }
-    void Damage()
+    // Skill breaking news
+    public void Damage()
     {
-         Instantiate(textObj, new Vector2(Screen.width / 2, Screen.height / 2), Quaternion.identity);
-         enemy.SetEnemyHP(enemy.getEnemyHP() - GameManager.Instance.playerDamage * 10);
+        // damage skill
+        Instantiate(textObj, new Vector2(Screen.width / 2, Screen.height / 2), Quaternion.identity);
+        enemy.SetEnemyHP(enemy.getEnemyHP() - GameManager.Instance.damageSkill);
     }
-    void Heal()
+    public void Heal()
     {
+        // heal skill
         Instantiate(healObj, new Vector2(Screen.width / 2, Screen.height / 2), Quaternion.identity);
-        GameManager.Instance.population += (100 * (1 + GameManager.Instance.currentScene));
+        GameManager.Instance.population += GameManager.Instance.healSkill;
+
+        // max cap
+        if (GameManager.Instance.population > GameManager.Instance.maxPopul)
+            GameManager.Instance.population = GameManager.Instance.maxPopul;
     }
-    void Money()
+    public void Money()
     {
+        // money skill
         Instantiate(moneyObj, new Vector2(Screen.width / 2, Screen.height / 2), Quaternion.identity);
-        GameManager.Instance.money += (GameManager.Instance.playerDamage * 10);
+        GameManager.Instance.money += GameManager.Instance.moneySkill;
     }
 }

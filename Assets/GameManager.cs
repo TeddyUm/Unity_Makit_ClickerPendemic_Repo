@@ -17,6 +17,9 @@ public class GameManager : MonoBehaviour
     public int follower3Damage = 50;  // follower3 damage
     public int follower4Damage = 100; // follower4 damage
     public int currentScene = 0;        // scene number
+    public int damageSkill = 100;        // damage skill amount
+    public int healSkill = 100;        // heal skill amount
+    public int moneySkill = 100;        // money skill amount
 
     public int maxPopul = 1000;
     public int maxEnemyHP = 1000;
