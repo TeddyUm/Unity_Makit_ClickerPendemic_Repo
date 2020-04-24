@@ -7,21 +7,21 @@ public class Shop_Followers : MonoBehaviour
 {
     public Text shop_Follower_1_level;
     public Text shop_Follower_1_Des;
-    private int shop_Follower_1_amount = 1;
+    private static int shop_Follower_1_amount = 1;
     public Text Follower_1_money_text;
-    public int shop_Follower_1_price;
+    private static int shop_Follower_1_price = 100;
 
     public Text shop_Follower_2_level;
     public Text shop_Follower_2_Des;
-    private int shop_Follower_2_amount = 1;
+    private static int shop_Follower_2_amount = 1;
     public Text Follower_2_money_text;
-    public int shop_Follower_2_price;
+    private static int shop_Follower_2_price = 200;
 
     public Text shop_Follower_3_level;
     public Text shop_Follower_3_Des;
-    private int shop_Follower_3_amount = 1;
+    private static int shop_Follower_3_amount = 1;
     public Text Follower_3_money_text;
-    public int shop_Follower_3_price;
+    private static int shop_Follower_3_price = 300;
 
     private void Update()
     {

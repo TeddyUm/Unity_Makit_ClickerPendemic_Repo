@@ -7,27 +7,27 @@ public class UI_Shop : MonoBehaviour
 {
     public Text shop_Player_level;
     public Text shop_Player_Des;
-    static int shop_Player_amount = 1;
+    private static int shop_Player_amount = 1;
     public Text Player_money_text;
-    public int shop_Player_price;
+    private static int shop_Player_price = 10;
 
     public Text shop_Player_skill_1_level;
     public Text shop__Player_skill_1_Des;
-    static int shop__Player_skill_1_amount = 1;
+    private static int shop__Player_skill_1_amount = 1;
     public Text skill_1_money_text;
-    public int shop__Player_skill_1_price;
+    private static int shop__Player_skill_1_price = 20;
 
     public Text shop_Player_skill_2_level;
     public Text shop__Player_skill_2_Des;
-    static int shop__Player_skill_2_amount = 1;
+    private static int shop__Player_skill_2_amount = 1;
     public Text skill_2_money_text;
-    public int shop__Player_skill_2_price;
+    private static int shop__Player_skill_2_price = 30;
 
     public Text shop_Player_skill_3_level;
     public Text shop__Player_skill_3_Des;
-    static int shop__Player_skill_3_amount = 1;
+    private static int shop__Player_skill_3_amount = 1;
     public Text skill_3_money_text;
-    public int shop__Player_skill_3_price;
+    private static int shop__Player_skill_3_price = 40;
 
     private void Update()
     {
