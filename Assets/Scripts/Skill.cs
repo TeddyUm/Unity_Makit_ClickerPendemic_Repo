@@ -39,6 +39,8 @@ public class Skill : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameManager.Instance.healSkill = (GameManager.Instance.population / 10);
+
         // init skill func
         newsLeftTime = newsCooltime;
         newsIsClicked = true;

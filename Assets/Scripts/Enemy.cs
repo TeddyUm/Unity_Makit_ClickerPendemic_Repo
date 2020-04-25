@@ -17,7 +17,13 @@ public class Enemy : MonoBehaviour
     private SpriteRenderer enemyRenderer;   // enemy image renderer
     private int[] enemyMaxHP = new int[5];  // enemy max HP save 
     private int count;                      // order of enemies (boss == 4)
+
     private float killTime = 0.0f;          // time limit timer
+    public float killTimeControl = 0.1f;
+    public float BosskillTimeControl = 0.09f;
+
+    public int enemy_money = 1000;
+    public int Boss_money = 3000;
 
     // Start is called before the first frame update
     void Start()
@@ -47,11 +53,11 @@ public class Enemy : MonoBehaviour
             // Money
             if (count == 4) //  Boss
             {
-                GameManager.Instance.money += 3000;
+                GameManager.Instance.money += Boss_money;
             }
             else
             {
-                GameManager.Instance.money += 1000;
+                GameManager.Instance.money += enemy_money;
             }
 
             // if enemy die, next enemy generate. timer reset
@@ -103,12 +109,24 @@ public class Enemy : MonoBehaviour
         // kill people! timer
         killTime += Time.deltaTime;
 
-        if(killTime > 0.01f)
+        if (count == 4) // boss killTIme
         {
-            GameManager.Instance.population -= 1;
-            killTime = 0.0f;
+            if (killTime > BosskillTimeControl)
+            {
+                GameManager.Instance.population -= 1;
+                killTime = 0.0f;
+            }
         }
-    }
+        else
+        {
+            if (killTime > killTimeControl)
+            {
+                GameManager.Instance.population -= 1;
+                killTime = 0.0f;
+            }
+        }
+    
+    }        
 
     public void SetEnemyHP(int HP)
     {

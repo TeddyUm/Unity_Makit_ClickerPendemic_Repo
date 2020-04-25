@@ -84,10 +84,10 @@
     <Compile Include="Assets\Scripts\Menu\SceneLoad.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\Shop_Followers.cs" />
+    <Compile Include="Assets\Scripts\Shop_Player.cs" />
     <Compile Include="Assets\Scripts\Skill.cs" />
     <Compile Include="Assets\Scripts\Stage1UI.cs" />
     <Compile Include="Assets\Scripts\StageLoading.cs" />
-    <Compile Include="Assets\Scripts\UI_Shop.cs" />
     <None Include="Assets\JMO Assets\Cartoon FX\Shaders\CFX3 Multiply Color.shader" />
     <None Include="Assets\JMO Assets\Cartoon FX\Shaders\CFXM_MobileParticleAdd_Alpha8.shader" />
     <None Include="Assets\JMO Assets\Cartoon FX\CartoonFX Free.txt" />

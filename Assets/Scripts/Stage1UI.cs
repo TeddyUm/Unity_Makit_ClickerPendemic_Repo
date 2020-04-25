@@ -16,6 +16,9 @@ public class Stage1UI : MonoBehaviour
     private float currentEnemyHP;
     private float fadeTime;
     private bool bFadeIn;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +32,10 @@ public class Stage1UI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Money Text
+        Text money_text = GameObject.FindGameObjectWithTag("Money").GetComponentInChildren<Text>();
+        money_text.text = string.Format("{0:n0}", GameManager.Instance.money);
+
         // Time print UI evey tick
         if (GameManager.Instance.maxPopul >= GameManager.Instance.population)
         {
