@@ -17,6 +17,8 @@ public class Skill : MonoBehaviour
     public GameObject textObj;
     public GameObject healObj;
     public GameObject moneyObj;
+
+    public GameObject skillEffect;
     public Enemy enemy;
 
     // skill cool time

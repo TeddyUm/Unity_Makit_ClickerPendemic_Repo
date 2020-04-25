@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     public Enemy enemy;
     public float attackTimer = 1.0f;
     private float attackCount;
+    public GameObject tabEffect;
 
     // Start is called before the first frame update
     void Start()
@@ -39,7 +40,9 @@ public class Player : MonoBehaviour
             if (rayHit.collider == touch && Input.GetMouseButtonDown(0))
             {
                 Instantiate(textObj, new Vector2(Screen.width / 2, Screen.height / 2), Quaternion.identity);
+                Instantiate(tabEffect, mousePos, Quaternion.identity);
                 enemy.SetEnemyHP(enemy.getEnemyHP() - GameManager.Instance.playerDamage);
+                SoundManager.Instance.PlayTabSound();
             }
         }
     }

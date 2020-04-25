@@ -5,37 +5,38 @@ using UnityEngine.UI;
 
 public class Shop_Followers : MonoBehaviour
 {
-    public Text shop_Follower_1_level;
-    public Text shop_Follower_1_Des;
-    private static int shop_Follower_1_amount = 1;
-    public Text Follower_1_money_text;
-    private static int shop_Follower_1_price = 100;
+    public Text[] shop_Follower_level;
+    public Text[] shop_Follower_Des;
+    private static int[] shop_Follower_amount = new int[4];
+    public Text[] Follower_money_text;
 
-    public Text shop_Follower_2_level;
-    public Text shop_Follower_2_Des;
-    private static int shop_Follower_2_amount = 1;
-    public Text Follower_2_money_text;
-    private static int shop_Follower_2_price = 200;
-
-    public Text shop_Follower_3_level;
-    public Text shop_Follower_3_Des;
-    private static int shop_Follower_3_amount = 1;
-    public Text Follower_3_money_text;
-    private static int shop_Follower_3_price = 300;
+    // Basic price
+    private static int shop_Follower_1_price = 1000;
+    private static int shop_Follower_2_price = 2500;
+    private static int shop_Follower_3_price = 4000;
+    private static int shop_Follower_4_price = 6500;
 
     private void Update()
     {
-        shop_Follower_1_level.text = "Lv. " + shop_Follower_1_amount;
-        shop_Follower_1_Des.text = "Power up";
-        Follower_1_money_text.text = string.Format("{0:n0}", shop_Follower_1_price);
+        shop_Follower_amount[0] = 1;
+        shop_Follower_level[0].text = "Lv. " + shop_Follower_amount[0];
+        shop_Follower_Des[0].text = "black Death doctor";
+        Follower_money_text[0].text = string.Format("{0:n0}", shop_Follower_1_price);
 
-        shop_Follower_2_level.text = "Lv. " + shop_Follower_2_amount;
-        shop_Follower_2_Des.text = "Power up";
-        Follower_2_money_text.text = string.Format("{0:n0}", shop_Follower_2_price);
+        shop_Follower_amount[1] = 1;
+        shop_Follower_level[1].text = "Lv. " + shop_Follower_amount[1];
+        shop_Follower_Des[1].text = "Flue doctor";
+        Follower_money_text[1].text = string.Format("{0:n0}", shop_Follower_2_price);
 
-        shop_Follower_3_level.text = "Lv. " + shop_Follower_3_amount;
-        shop_Follower_3_Des.text = "Power up";
-        Follower_3_money_text.text = string.Format("{0:n0}", shop_Follower_3_price);
+        shop_Follower_amount[2] = 1;
+        shop_Follower_level[2].text = "Lv. " + shop_Follower_amount[2];
+        shop_Follower_Des[2].text = "Operating doctor";
+        Follower_money_text[2].text = string.Format("{0:n0}", shop_Follower_3_price);
+
+        shop_Follower_amount[3] = 1;
+        shop_Follower_level[3].text = "Lv. " + shop_Follower_amount[3];
+        shop_Follower_Des[3].text = "Veiled doctor";
+        Follower_money_text[3].text = string.Format("{0:n0}", shop_Follower_4_price);
     }
 
     public void shop_Follower_1()
@@ -43,25 +44,27 @@ public class Shop_Followers : MonoBehaviour
         if (GameManager.Instance.money >= shop_Follower_1_price)
         {
             GameManager.Instance.money -= shop_Follower_1_price;
-            shop_Follower_1_amount += 1;
+            shop_Follower_amount[0] += 1;
 
             // Fix later
-            shop_Follower_1_price += 100;
-            GameManager.Instance.follower1Damage += 10; 
+            shop_Follower_1_price += 300;
+            GameManager.Instance.follower1Damage += 15;
         }
     }
 
     public void shop_Follower_2()
     {
+
         if (GameManager.Instance.money >= shop_Follower_2_price)
         {
             GameManager.Instance.money -= shop_Follower_2_price;
-            shop_Follower_2_amount += 1;
+            shop_Follower_amount[1] += 1;
 
             // Fix later
-            shop_Follower_2_price += 100;
+            shop_Follower_2_price += 500;
             GameManager.Instance.follower2Damage += 20;
         }
+
     }
 
     public void shop_Follower_3()
@@ -69,12 +72,24 @@ public class Shop_Followers : MonoBehaviour
         if (GameManager.Instance.money >= shop_Follower_3_price)
         {
             GameManager.Instance.money -= shop_Follower_3_price;
-            shop_Follower_3_amount += 1;
+            shop_Follower_amount[2] += 1;
 
             // Fix later
-            shop_Follower_3_price += 100;
-            GameManager.Instance.follower3Damage += 20;
+            shop_Follower_3_price += 800;
+            GameManager.Instance.follower3Damage += 25;
         }
     }
 
+    public void shop_Follower_4()
+    {
+        if (GameManager.Instance.money >= shop_Follower_4_price)
+        {
+            GameManager.Instance.money -= shop_Follower_4_price;
+            shop_Follower_amount[3] += 1;
+
+            // Fix later
+            shop_Follower_4_price += 1000;
+            GameManager.Instance.follower4Damage += 30;
+        }
+    }
 }

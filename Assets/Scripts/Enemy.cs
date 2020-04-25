@@ -5,14 +5,18 @@ using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
+    // timer reset
+    public int reset_population;
+
     // data
     public int[] enemyHP;                   // enemy HP
     public string[] enemyName;              // enemy name
     public Sprite[] sprites;                // sprite enemy
     public Text hpNum;                      // enemy HP UI
+    public Stage1UI stage;
     private SpriteRenderer enemyRenderer;   // enemy image renderer
     private int[] enemyMaxHP = new int[5];  // enemy max HP save 
-    private int count;                      // order of enemies
+    private int count;                      // order of enemies (boss == 4)
     private float killTime = 0.0f;          // time limit timer
 
     // Start is called before the first frame update
@@ -27,7 +31,6 @@ public class Enemy : MonoBehaviour
         {
             enemyMaxHP[i] = enemyHP[i];
         }
-
         GameManager.Instance.maxEnemyHP = enemyMaxHP[count];
         GameManager.Instance.currentScene++;
     }
@@ -42,10 +45,18 @@ public class Enemy : MonoBehaviour
         if(enemyHP[count] <= 0)
         {
             // Money
-            GameManager.Instance.money += 1000;
+            if (count == 4) //  Boss
+            {
+                GameManager.Instance.money += 3000;
+            }
+            else
+            {
+                GameManager.Instance.money += 1000;
+            }
 
             // if enemy die, next enemy generate. timer reset
-            GameManager.Instance.population = 1000;
+            GameManager.Instance.population = reset_population;
+
             enemyRenderer.sprite = sprites[count];
             count++;
             if(count < 5)
@@ -58,15 +69,15 @@ public class Enemy : MonoBehaviour
                 switch(GameManager.Instance.currentScene)
                 {
                     case 1:
-                        GameManager.Instance.SceneChange("Stage2");
+                        GameManager.Instance.SceneChange("StageLoading");
                         count = 0;
                         break;
                     case 2:
-                        GameManager.Instance.SceneChange("Stage3");
+                        GameManager.Instance.SceneChange("StageLoading");
                         count = 0;
                         break;
                     case 3:
-                        GameManager.Instance.SceneChange("Stage4");
+                        GameManager.Instance.SceneChange("StageLoading");
                         count = 0;
                         break;
                     case 4:

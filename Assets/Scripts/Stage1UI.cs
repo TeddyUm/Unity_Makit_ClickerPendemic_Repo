@@ -11,14 +11,19 @@ public class Stage1UI : MonoBehaviour
     public Enemy enemy;
     public Image populGuage;
     public Image enemyHPGuage;
+    public Image fadeInScreen;
     private float currentPopul;
     private float currentEnemyHP;
+    private float fadeTime;
+    private bool bFadeIn;
     // Start is called before the first frame update
     void Start()
     {
         GameManager.Instance.maxPopul = GameManager.Instance.population;
         currentPopul = 1.0f;
         currentEnemyHP = 1.0f;
+        fadeTime = 0.0f;
+        bFadeIn = true;
     }
 
     // Update is called once per frame
@@ -43,5 +48,31 @@ public class Stage1UI : MonoBehaviour
 
         // enemy name
         enemyName.text = enemy.getEnemyName();
+
+        if(bFadeIn == true)
+        {
+            FadeInFunction();
+        }
+    }
+
+    void FadeInFunction()
+    {
+        fadeTime += Time.deltaTime;
+        if (fadeTime < 1.0f)
+        {
+            fadeInScreen.color = new Color(fadeInScreen.color.r, fadeInScreen.color.g, fadeInScreen.color.b, 1.0f - fadeTime);
+        }
+        else
+        {
+            bFadeIn = false;
+            fadeInScreen.enabled = false;
+        }
+    }
+
+    public void initFadeIn()
+    {
+        fadeTime = 0.0f;
+        bFadeIn = true;
+        fadeInScreen.enabled = true;
     }
 }

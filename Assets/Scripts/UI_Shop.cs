@@ -50,7 +50,7 @@ public class UI_Shop : MonoBehaviour
 
     public void shop_player()
     {
-        if(GameManager.Instance.money >= shop_Player_price)
+        if (GameManager.Instance.money >= shop_Player_price)
         {
             GameManager.Instance.money -= shop_Player_price;
             shop_Player_amount += 1;
@@ -71,6 +71,7 @@ public class UI_Shop : MonoBehaviour
             shop__Player_skill_1_price += 30;
             GameManager.Instance.damageSkill += 100;
         }
+
     }
 
     public void shop_player_skill_2()

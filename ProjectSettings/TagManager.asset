@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Money
   - Shop_p
+  - Follower
   layers:
   - Default
   - TransparentFX

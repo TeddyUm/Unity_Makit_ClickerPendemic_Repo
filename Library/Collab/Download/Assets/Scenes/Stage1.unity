@@ -809,20 +809,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b6bd7f81f806b34d803f422191158e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reset_population: 0
   enemyHP: e8030000d0070000b80b0000a00f000088130000
   enemyName:
-  - Name1
-  - Name2
-  - Name3
-  - Name4
-  - Boss1
+  - Gangrene 1
+  - Gangrene 2
+  - Gangrene 3
+  - Gangrene 4
+  - BlackDeath
   sprites:
-  - {fileID: 21300000, guid: 8afd5b292102deb4eb552b9530bb9ea1, type: 3}
-  - {fileID: 21300000, guid: bffc99dad1cc95d478fb103cd44ae3aa, type: 3}
-  - {fileID: 21300000, guid: 4408269a96438e84796304f4ac0ed623, type: 3}
-  - {fileID: 21300000, guid: 4461c87bad5222349b14c22b26d43b95, type: 3}
-  - {fileID: 21300000, guid: 68e1f3d1470827b49b3b3347af0e4f6d, type: 3}
+  - {fileID: 21300000, guid: be26e683bea7d234d96b522c6def0114, type: 3}
+  - {fileID: 21300000, guid: fb35bb1ef70235c41ad3216892eafeda, type: 3}
+  - {fileID: 21300000, guid: 74d7c6ffabe982041b52a912c9820990, type: 3}
+  - {fileID: 21300000, guid: eee2de4370b9d4c48931d7c19e057805, type: 3}
+  - {fileID: 21300000, guid: 0cf8f59b949e24a4b95ff41c477ab585, type: 3}
   hpNum: {fileID: 1584891626}
+  stage: {fileID: 0}
 --- !u!4 &166629311
 Transform:
   m_ObjectHideFlags: 0
@@ -1077,6 +1079,7 @@ MonoBehaviour:
   textObj: {fileID: 7481948478167229616, guid: 0c8d01c38b898e14f832e4171684b29c, type: 3}
   enemy: {fileID: 166629310}
   attackTimer: 1
+  tabEffect: {fileID: 100000, guid: f06e78284f831ae469c74624ab5d513b, type: 3}
 --- !u!212 &188262839
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2067,7 +2070,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 254617964}
+      - m_Target: {fileID: 1828803345}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -2088,17 +2091,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 2028237416}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &331294829
 MonoBehaviour:
@@ -2797,17 +2789,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 276008918}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &384343544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3097,6 +3078,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicsource: {fileID: 2130827153}
   btnsource: {fileID: 1000002256}
+  tabSource: {fileID: 951046110}
 --- !u!4 &419444966
 Transform:
   m_ObjectHideFlags: 0
@@ -3110,6 +3092,7 @@ Transform:
   m_Children:
   - {fileID: 2130827154}
   - {fileID: 1000002257}
+  - {fileID: 951046111}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3219,6 +3202,7 @@ MonoBehaviour:
   healObj: {fileID: 2993928903929513972, guid: 7e25642808cf3b2439876cb298c54b4b, type: 3}
   moneyObj: {fileID: 6700661232540347143, guid: cd05217826e084d4b93df001454f6fcb,
     type: 3}
+  skillEffect: {fileID: 100004, guid: 757df604761b8ef42831192c70ee1099, type: 3}
   enemy: {fileID: 166629310}
   newsCooltime: 10
   fundCooltime: 25
@@ -3722,15 +3706,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4cbf6bba98b6474c9897cdc0b628fa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  population: 1000
+  population: 4500
   money: 0
-  playerDamage: 10
+  playerDamage: 50
   follower1Damage: 10
   follower2Damage: 20
   follower3Damage: 50
   follower4Damage: 100
   currentScene: 0
-  damageSkill: 100
+  damageSkill: 1000
   healSkill: 100
   moneySkill: 100
   maxPopul: 1000
@@ -5413,6 +5397,133 @@ RectTransform:
   m_AnchoredPosition: {x: 372.75, y: -250}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &951046109
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 951046111}
+  - component: {fileID: 951046110}
+  m_Layer: 0
+  m_Name: tab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &951046110
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951046109}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: efc16359355bff94da1ef0d1be97302d, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &951046111
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951046109}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 419444966}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &951235943
 GameObject:
   m_ObjectHideFlags: 0
@@ -6625,24 +6736,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shop_Player_level: {fileID: 833205866}
   shop_Player_Des: {fileID: 305232750}
-  shop_Player_amount: 1
   Player_money_text: {fileID: 647917283}
-  shop_Player_price: 10
   shop_Player_skill_1_level: {fileID: 742497637}
   shop__Player_skill_1_Des: {fileID: 1818679683}
-  shop__Player_skill_1_amount: 1
   skill_1_money_text: {fileID: 1697633352}
-  shop__Player_skill_1_price: 20
   shop_Player_skill_2_level: {fileID: 1347933153}
   shop__Player_skill_2_Des: {fileID: 1772624583}
-  shop__Player_skill_2_amount: 1
   skill_2_money_text: {fileID: 1096007701}
-  shop__Player_skill_2_price: 30
   shop_Player_skill_3_level: {fileID: 548352638}
   shop__Player_skill_3_Des: {fileID: 857962805}
-  shop__Player_skill_3_amount: 1
   skill_3_money_text: {fileID: 1480441626}
-  shop__Player_skill_3_price: 40
 --- !u!114 &1122950240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7060,6 +7163,78 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1241638940}
+  m_CullTransparentMesh: 0
+--- !u!1 &1242453536
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1242453537}
+  - component: {fileID: 1242453539}
+  - component: {fileID: 1242453538}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1242453537
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1242453536}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 8.5879, y: 13.85, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1542042881}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1242453538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1242453536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &1242453539
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1242453536}
   m_CullTransparentMesh: 0
 --- !u!1 &1264456580
 GameObject:
@@ -8309,6 +8484,7 @@ RectTransform:
   - {fileID: 1952713429}
   - {fileID: 471762436}
   - {fileID: 1664966717}
+  - {fileID: 1242453537}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8334,6 +8510,7 @@ MonoBehaviour:
   enemy: {fileID: 166629310}
   populGuage: {fileID: 591129561}
   enemyHPGuage: {fileID: 6575957}
+  fadeInScreen: {fileID: 1242453538}
 --- !u!1 &1565934356
 GameObject:
   m_ObjectHideFlags: 0
@@ -10190,15 +10367,12 @@ MonoBehaviour:
   shop_Follower_1_level: {fileID: 488137377}
   shop_Follower_1_Des: {fileID: 1705068576}
   Follower_1_money_text: {fileID: 1782925720}
-  shop_Follower_1_price: 100
   shop_Follower_2_level: {fileID: 1078708949}
   shop_Follower_2_Des: {fileID: 667594880}
   Follower_2_money_text: {fileID: 1441319860}
-  shop_Follower_2_price: 200
   shop_Follower_3_level: {fileID: 508373779}
   shop_Follower_3_Des: {fileID: 1889403399}
   Follower_3_money_text: {fileID: 240656910}
-  shop_Follower_3_price: 300
 --- !u!114 &1751583525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10717,7 +10891,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1828803346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11429,7 +11603,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Stage 1 (Year)
+  m_Text: Stage 1 (14th)
 --- !u!222 &1945825009
 CanvasRenderer:
   m_ObjectHideFlags: 0
