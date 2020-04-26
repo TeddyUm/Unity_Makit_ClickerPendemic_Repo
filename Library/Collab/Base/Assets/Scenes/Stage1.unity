@@ -956,7 +956,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reset_population: 450
-  enemyHP: f401000058020000bc0200002003000084030000
+  enemyHP: 90010000bc020000840300004c040000dc050000
   enemyName:
   - Gangrene 1
   - Gangrene 2
@@ -972,6 +972,9 @@ MonoBehaviour:
   hpNum: {fileID: 1584891626}
   stage: {fileID: 0}
   killTimeControl: 0.1
+  BosskillTimeControl: 0.08
+  enemy_money: 1000
+  Boss_money: 3000
 --- !u!4 &166629311
 Transform:
   m_ObjectHideFlags: 0
@@ -2493,7 +2496,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 823788541}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -3668,9 +3671,9 @@ MonoBehaviour:
   follower3Damage: 50
   follower4Damage: 100
   currentScene: 0
-  damageSkill: 1000
+  damageSkill: 50
+  moneySkill: 1000
   healSkill: 100
-  moneySkill: 100
   maxPopul: 1000
   maxEnemyHP: 1000
 --- !u!20 &519420031
@@ -7602,7 +7605,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1242453537
 RectTransform:
   m_ObjectHideFlags: 0

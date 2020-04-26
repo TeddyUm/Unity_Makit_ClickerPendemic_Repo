@@ -92,10 +92,10 @@
     <None Include="Assets\JMO Assets\Cartoon FX\Shaders\CFXM_MobileParticleAdd_Alpha8.shader" />
     <None Include="Assets\JMO Assets\Cartoon FX\CartoonFX Free.txt" />
     <None Include="Assets\Images\Items\Shader\SH Sprite Icon Outline Color.shader" />
-    <None Include="Assets\Sounds\LoopAndMusicFree\_readme\readme_en_ver2.0.txt" />
+    <None Include="Assets\Images\Necromancer GUI\Kingthings.txt" />
     <None Include="Assets\JMO Assets\Cartoon FX Easy Editor\CartoonFX Easy Editor Readme.txt" />
-    <None Include="Assets\Sounds\LoopAndMusicFree\_readme\readme_jp_ver2.0.txt" />
     <None Include="Assets\Images\Royal UI\RoyalUI\readme.txt" />
+    <None Include="Assets\Images\Necromancer GUI\Readme.txt" />
     <None Include="Assets\Images\Items\Shader\SH UI Icon Outline Color.shader" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/auj08/OneDrive/바탕 화면/MakitClickerRepo/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>

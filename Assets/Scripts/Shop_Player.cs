@@ -24,17 +24,17 @@ public class Shop_Player : MonoBehaviour
 
         shop_Player_amount[1] = 1;
         shop_Player_level[1].text = "Lv. " + shop_Player_amount[1];
-        shop_Player_Des[1].text = "Clinical Strike";
+        shop_Player_Des[1].text = "Breaking News";
         Player_money_text[1].text = string.Format("{0:n0}", shop_Player_2_price);
 
         shop_Player_amount[2] = 1;
         shop_Player_level[2].text = "Lv. " + shop_Player_amount[2];
-        shop_Player_Des[2].text = "Donor's hand"; 
+        shop_Player_Des[2].text = "Emergency Fund"; 
         Player_money_text[2].text = string.Format("{0:n0}", shop_Player_3_price);
 
         shop_Player_amount[3] = 1;
         shop_Player_level[3].text = "Lv. " + shop_Player_amount[3];
-        shop_Player_Des[3].text = "Vaccination";
+        shop_Player_Des[3].text = "Medical Supply";
         Player_money_text[3].text = string.Format("{0:n0}", shop_Player_4_price);
     }
 
@@ -60,7 +60,7 @@ public class Shop_Player : MonoBehaviour
 
             // Fix later
             shop_Player_2_price += 400;
-            GameManager.Instance.damageSkill = GameManager.Instance.playerDamage * 2;
+            GameManager.Instance.damageSkill += (GameManager.Instance.playerDamage * 2);
         }
 
     }

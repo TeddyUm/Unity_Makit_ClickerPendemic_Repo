@@ -62,10 +62,10 @@ public class Enemy : MonoBehaviour
 
             // if enemy die, next enemy generate. timer reset
             GameManager.Instance.population = reset_population;
-
             enemyRenderer.sprite = sprites[count];
             count++;
-            if(count < 5)
+
+            if (count < 5)
              GameManager.Instance.maxEnemyHP = enemyMaxHP[count];
 
             // if win 5 enemies, stage change
