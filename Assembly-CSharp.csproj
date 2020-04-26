@@ -95,6 +95,7 @@
     <None Include="Assets\Images\Necromancer GUI\Kingthings.txt" />
     <None Include="Assets\JMO Assets\Cartoon FX Easy Editor\CartoonFX Easy Editor Readme.txt" />
     <None Include="Assets\Images\Royal UI\RoyalUI\readme.txt" />
+    <None Include="Assets\Images\UI\Royal UI\RoyalUI\readme.txt" />
     <None Include="Assets\Images\Necromancer GUI\Readme.txt" />
     <None Include="Assets\Images\Items\Shader\SH UI Icon Outline Color.shader" />
     <Reference Include="Unity.TextMeshPro.Editor">

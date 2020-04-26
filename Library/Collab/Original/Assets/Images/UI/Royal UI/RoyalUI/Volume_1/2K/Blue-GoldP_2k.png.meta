@@ -1,0 +1,572 @@
+fileFormatVersion: 2
+guid: 3cfea3d7c2f4b1a4a822479ed3ebd49f
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Blue-GoldP_2k_0
+    21300002: Blue-GoldP_2k_222
+    21300004: Blue-GoldP_2k_333
+    21300006: Blue-GoldP_2k_444
+    21300008: Blue-GoldP_2k_555
+    21300010: Blue-GoldP_2k_111
+    21300012: Blue-GoldP_2k_6
+    21300014: Blue-GoldP_2k_14
+    21300016: Blue-GoldP_2k_11
+    21300018: Blue-GoldP_2k_9
+    21300020: Blue-GoldP_2k_10
+    21300022: Blue-GoldP_2k_12
+    21300024: Blue-GoldP_2k_8
+    21300026: Blue-GoldP_2k_211
+    21300028: Blue-GoldP_2k_777
+    21300030: Blue-GoldP_2k_16
+    21300032: Blue-GoldP_2k_122
+    21300034: Blue-GoldP_2k_100
+    21300036: Blue-GoldP_2k_999
+    21300038: Blue-GoldP_2k_19
+    21300040: Blue-GoldP_2k_888
+    21300042: Blue-GoldP_2k_21
+    21300044: Blue-GoldP_2k_2
+    21300046: Blue-GoldP_2k_3
+    21300048: Blue-GoldP_2k_4
+    21300050: Blue-GoldP_2k_5
+    21300052: Blue-GoldP_2k_1
+    21300054: Blue-GoldP_2k_17
+    21300056: Blue-GoldP_2k_18
+    21300058: Blue-GoldP_2k_20
+    21300060: Blue-GoldP_2k_15
+    21300062: Blue-GoldP_2k_7
+    21300064: Blue-GoldP_2k_13
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: 16
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Blue-GoldP_2k_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 1694
+        width: 640
+        height: 325
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 43, y: 36, z: 40, w: 42}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7aa805a965e20d44faaa8a6467cbbf82
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue-GoldP_2k_2
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 1380
+        width: 636
+        height: 636
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 39, y: 37, z: 35, w: 40}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc522558221491d44a2614c366827da2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue-GoldP_2k_3
+      rect:
+        serializedVersion: 2
+        x: 1333
+        y: 1379
+        width: 325
+        height: 638
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 38, y: 36, z: 36, w: 41}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d0b02f4c61c32d4b83e0884db074ad9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue-GoldP_2k_4
+      rect:
+        serializedVersion: 2
+        x: 1671
+        y: 1376
+        width: 165
+        height: 641
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 39, y: 37, z: 35, w: 40}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4ad4de6bc700944c87c1362fce4201d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue-GoldP_2k_5
+      rect:
+        serializedVersion: 2
+        x: 1848
+        y: 1851
+        width: 168
+        height: 165
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 35, y: 27, z: 36, w: 29}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8dd834c83c895b439973f0f5fa30975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue-GoldP_2k_1
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 1523
+        width: 639
+        height: 164
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 43, y: 35, z: 38, w: 41}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cce0c5c41c25df43a14a9b434416612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue-GoldP_2k_6
+      rect:
+        serializedVersion: 2
+        x: 1850
+        y: 1672
+        width: 168
+        height: 167
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fa7c68b60c042640bdc8346a5de646f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue-GoldP_2k_14
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 363
+        width: 638
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 44, y: 39, z: 38, w: 34}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f60abcad6a26b84b94933687e68ae74
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue-GoldP_2k_16
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 33
+        width: 632
+        height: 635
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 38, y: 39, z: 33, w: 36}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82d79e487fa3cb340beaf3cdb44f7103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue-GoldP_2k_17
+      rect:
+        serializedVersion: 2
+        x: 1334
+        y: 30
+        width: 322
+        height: 640
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 41, y: 43, z: 35, w: 39}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3f36826108aa414098dc2c7508905c4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue-GoldP_2k_18
+      rect:
+        serializedVersion: 2
+        x: 1672
+        y: 30
+        width: 164
+        height: 639
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 41, y: 43, z: 36, w: 37}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83d4b11e79a57764992ae868a1448e44
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue-GoldP_2k_20
+      rect:
+        serializedVersion: 2
+        x: 1852
+        y: 211
+        width: 164
+        height: 164
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc518cacb8adb004fb3337bb0f3fcf01
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue-GoldP_2k_15
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 32
+        width: 637
+        height: 321
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 41, y: 39, z: 40, w: 35}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 398d1d4e917cd84498388ec16c413a32
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue-GoldP_2k_21
+      rect:
+        serializedVersion: 2
+        x: 1850
+        y: 33
+        width: 166
+        height: 165
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 37, y: 28, z: 34, w: 26}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e6f64523b5483b4d8aaf771e7da5c69
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue-GoldP_2k_7
+      rect:
+        serializedVersion: 2
+        x: 1856
+        y: 1452
+        width: 134
+        height: 207
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02a4b692278a8ac4483f1918c622ea6d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue-GoldP_2k_11
+      rect:
+        serializedVersion: 2
+        x: 1703
+        y: 1054
+        width: 315
+        height: 315
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e727fe26272695e4eb7385ad491b6242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue-GoldP_2k_12
+      rect:
+        serializedVersion: 2
+        x: 1702
+        y: 681
+        width: 316
+        height: 313
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d73551a377fad9e458ca41619b75f68c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue-GoldP_2k_10
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 687
+        width: 617
+        height: 613
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 208b124c011ce2c408482a928b5538e3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue-GoldP_2k_9
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 752
+        width: 617
+        height: 614
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 331b08a9328a37d4c9bb52d0d7427650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue-GoldP_2k_19
+      rect:
+        serializedVersion: 2
+        x: 1857
+        y: 391
+        width: 132
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c746143299a438048b42828013cdc25d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue-GoldP_2k_8
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 1347
+        width: 168
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e1c62a3e2b05eb4287973e0cfeff988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue-GoldP_2k_13
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 539
+        width: 169
+        height: 167
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 442031ed714e82c438b38d970936ad96
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

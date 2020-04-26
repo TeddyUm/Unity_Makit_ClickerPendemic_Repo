@@ -2840,8 +2840,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b6bd7f81f806b34d803f422191158e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reset_population: 8000
-  enemyHP: e8030000d0070000b80b0000a00f000088130000
+  enemyHP: 50460000d8590000606d0000e8800000409c0000
   enemyName:
   - Pneumonia 1
   - Pneumonia 2
@@ -2856,10 +2855,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 68e1f3d1470827b49b3b3347af0e4f6d, type: 3}
   hpNum: {fileID: 425079534}
   stage: {fileID: 0}
-  killTimeControl: 0.1
-  BosskillTimeControl: 0.09
-  enemy_money: 1000
-  Boss_money: 3000
+  KillSpeedControl: 30
+  enemy_money: 2500
+  Boss_money: 5000
 --- !u!212 &434736506
 SpriteRenderer:
   m_ObjectHideFlags: 0

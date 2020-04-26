@@ -17,8 +17,6 @@ public class Stage1UI : MonoBehaviour
     private float fadeTime;
     private bool bFadeIn;
 
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -49,6 +47,7 @@ public class Stage1UI : MonoBehaviour
         // popul guage
         currentPopul = GameManager.Instance.population / (float)GameManager.Instance.maxPopul;
         populGuage.fillAmount = Mathf.Lerp(populGuage.fillAmount, currentPopul, Time.deltaTime * 3);
+
         // enemy guage
         currentEnemyHP = enemy.getEnemyHP() / (float)GameManager.Instance.maxEnemyHP;
         enemyHPGuage.fillAmount = Mathf.Lerp(enemyHPGuage.fillAmount, currentEnemyHP, Time.deltaTime * 3);
@@ -56,7 +55,7 @@ public class Stage1UI : MonoBehaviour
         // enemy name
         enemyName.text = enemy.getEnemyName();
 
-        if(bFadeIn == true)
+        if (bFadeIn == true)
         {
             FadeInFunction();
         }

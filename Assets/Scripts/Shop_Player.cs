@@ -74,7 +74,7 @@ public class Shop_Player : MonoBehaviour
 
             // Fix later
             shop_Player_3_price += 500;
-            GameManager.Instance.moneySkill += 500;
+            GameManager.Instance.moneySkill += 300;
         }  
     }
 

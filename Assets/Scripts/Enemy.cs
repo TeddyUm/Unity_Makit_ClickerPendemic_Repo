@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Enemy : MonoBehaviour
 {
     // timer reset
-    public int reset_population;
+    private int reset_population;
 
     // data
     public int[] enemyHP;                   // enemy HP
@@ -19,8 +19,7 @@ public class Enemy : MonoBehaviour
     private int count;                      // order of enemies (boss == 4)
 
     private float killTime = 0.0f;          // time limit timer
-    public float killTimeControl = 0.1f;
-    public float BosskillTimeControl = 0.09f;
+    public int KillSpeedControl = 1;
 
     public int enemy_money = 1000;
     public int Boss_money = 3000;
@@ -28,6 +27,8 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        reset_population = GameManager.Instance.population;
+
         enemyRenderer = gameObject.GetComponent<SpriteRenderer>();
         enemyRenderer.sprite = sprites[0];
         count = 0;
@@ -109,23 +110,23 @@ public class Enemy : MonoBehaviour
         // kill people! timer
         killTime += Time.deltaTime;
 
-        if (count == 4) // boss killTIme
+        // stage change speed
+        if (count == 4) // Boss
         {
-            if (killTime > BosskillTimeControl)
+            if (killTime > 0.03) // More Fast
             {
-                GameManager.Instance.population -= 1;
+                GameManager.Instance.population -= KillSpeedControl;
                 killTime = 0.0f;
             }
         }
         else
         {
-            if (killTime > killTimeControl)
+            if (killTime > 0.05)
             {
-                GameManager.Instance.population -= 1;
+                GameManager.Instance.population -= KillSpeedControl;
                 killTime = 0.0f;
             }
         }
-    
     }        
 
     public void SetEnemyHP(int HP)
