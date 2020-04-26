@@ -8431,8 +8431,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 68e1f3d1470827b49b3b3347af0e4f6d, type: 3}
   hpNum: {fileID: 1928211710}
   stage: {fileID: 0}
-  KillSpeedControl: 20
-  enemy_money: 2000
+  KillSpeedControl: 15
+  enemy_money: 3000
   Boss_money: 4000
 --- !u!212 &1301508416
 SpriteRenderer:
@@ -12193,6 +12193,7 @@ MonoBehaviour:
   follower3Damage: 50
   follower4Damage: 100
   currentScene: 0
+  SkillControl: 2
   damageSkill: 100
   moneySkill: 100
   healSkill: 100

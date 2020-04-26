@@ -47,7 +47,7 @@ public class Shop_Followers : MonoBehaviour
             shop_Follower_amount[0] += 1;
 
             // Fix later
-            shop_Follower_1_price += 300;
+            shop_Follower_1_price += 200;
             GameManager.Instance.follower1Damage += 15;
         }
     }
@@ -61,7 +61,7 @@ public class Shop_Followers : MonoBehaviour
             shop_Follower_amount[1] += 1;
 
             // Fix later
-            shop_Follower_2_price += 500;
+            shop_Follower_2_price += 350;
             GameManager.Instance.follower2Damage += 20;
         }
 
@@ -75,7 +75,7 @@ public class Shop_Followers : MonoBehaviour
             shop_Follower_amount[2] += 1;
 
             // Fix later
-            shop_Follower_3_price += 800;
+            shop_Follower_3_price += 500;
             GameManager.Instance.follower3Damage += 25;
         }
     }
@@ -88,7 +88,7 @@ public class Shop_Followers : MonoBehaviour
             shop_Follower_amount[3] += 1;
 
             // Fix later
-            shop_Follower_4_price += 1000;
+            shop_Follower_4_price += 700;
             GameManager.Instance.follower4Damage += 30;
         }
     }

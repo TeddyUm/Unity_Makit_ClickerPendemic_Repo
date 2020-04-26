@@ -2840,7 +2840,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b6bd7f81f806b34d803f422191158e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHP: 50460000d8590000606d0000e8800000409c0000
+  enemyHP: a816000038180000c8190000581b00004c1d0000
   enemyName:
   - Pneumonia 1
   - Pneumonia 2
@@ -2855,8 +2855,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 68e1f3d1470827b49b3b3347af0e4f6d, type: 3}
   hpNum: {fileID: 425079534}
   stage: {fileID: 0}
-  KillSpeedControl: 30
-  enemy_money: 2500
+  KillSpeedControl: 20
+  enemy_money: 4000
   Boss_money: 5000
 --- !u!212 &434736506
 SpriteRenderer:
@@ -7249,6 +7249,7 @@ MonoBehaviour:
   follower3Damage: 50
   follower4Damage: 100
   currentScene: 0
+  SkillControl: 2
   damageSkill: 100
   moneySkill: 100
   healSkill: 100

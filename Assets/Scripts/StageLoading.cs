@@ -34,12 +34,15 @@ public class StageLoading : MonoBehaviour
             switch (GameManager.Instance.currentScene)
             {
                 case 1:
+                    GameManager.Instance.population = 2000;
                     GameManager.Instance.SceneChange("Stage2");
                     break;
                 case 2:
+                    GameManager.Instance.population = 6500;
                     GameManager.Instance.SceneChange("Stage3");
                     break;
                 case 3:
+                    GameManager.Instance.population = 8000;
                     GameManager.Instance.SceneChange("Stage4");
                     break;
                 default:
