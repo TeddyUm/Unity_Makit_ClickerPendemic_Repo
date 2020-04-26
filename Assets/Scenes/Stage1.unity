@@ -954,8 +954,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b6bd7f81f806b34d803f422191158e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reset_population: 450
-  enemyHP: 90010000bc020000840300004c040000dc050000
+  enemyHP: 6400000064000000640000006400000064000000
   enemyName:
   - Gangrene 1
   - Gangrene 2
@@ -970,8 +969,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0cf8f59b949e24a4b95ff41c477ab585, type: 3}
   hpNum: {fileID: 1584891626}
   stage: {fileID: 0}
-  killTimeControl: 0.1
-  BosskillTimeControl: 0.08
+  KillSpeedControl: 1
   enemy_money: 1000
   Boss_money: 3000
 --- !u!4 &166629311
@@ -986,7 +984,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &166629312
 SpriteRenderer:
@@ -2898,7 +2896,7 @@ Transform:
   - {fileID: 1000002257}
   - {fileID: 951046111}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &423598633
 GameObject:
@@ -3670,6 +3668,7 @@ MonoBehaviour:
   follower3Damage: 50
   follower4Damage: 100
   currentScene: 0
+  SkillControl: 2
   damageSkill: 50
   moneySkill: 1000
   healSkill: 100
@@ -3729,7 +3728,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &570464797
 GameObject:

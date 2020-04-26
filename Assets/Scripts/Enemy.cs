@@ -30,9 +30,9 @@ public class Enemy : MonoBehaviour
         reset_population = GameManager.Instance.population;
 
         enemyRenderer = gameObject.GetComponent<SpriteRenderer>();
-        enemyRenderer.sprite = sprites[0];
         count = 0;
-
+        enemyRenderer.sprite = sprites[0];
+  
         // init max enemy HP
         for (int i = 0; i < 5; i++)
         {
@@ -48,8 +48,25 @@ public class Enemy : MonoBehaviour
         // enemy HP print
         hpNum.text = "" + enemyHP[count];
 
+        enemyRenderer.sprite = sprites[count];
+        GameManager.Instance.maxEnemyHP = enemyMaxHP[count];
+
+        // if times up, restart the enemy
+        if (GameManager.Instance.population <= 0)
+        {
+            if (count == 4) // boss
+            {
+                count--;
+            }
+            GameManager.Instance.population = GameManager.Instance.maxPopul;
+            for (int i = 0; i < 5; i++)
+            {
+                enemyHP[i] = enemyMaxHP[i];
+            }
+        }
+
         // enemy HP count action
-        if(enemyHP[count] <= 0)
+        if (enemyHP[count] <= 0)
         {
             // Money
             if (count == 4) //  Boss
@@ -63,11 +80,7 @@ public class Enemy : MonoBehaviour
 
             // if enemy die, next enemy generate. timer reset
             GameManager.Instance.population = reset_population;
-            enemyRenderer.sprite = sprites[count];
             count++;
-
-            if (count < 5)
-             GameManager.Instance.maxEnemyHP = enemyMaxHP[count];
 
             // if win 5 enemies, stage change
             if (count > 4)
@@ -77,33 +90,17 @@ public class Enemy : MonoBehaviour
                 {
                     case 1:
                         GameManager.Instance.SceneChange("StageLoading");
-                        count = 0;
                         break;
                     case 2:
                         GameManager.Instance.SceneChange("StageLoading");
-                        count = 0;
                         break;
                     case 3:
                         GameManager.Instance.SceneChange("StageLoading");
-                        count = 0;
                         break;
                     case 4:
                         GameManager.Instance.SceneChange("Ending");
-                        count = 0;
                         break;
                 }
-            }
-        }
-
-        // if times up, restart stage
-        if (GameManager.Instance.population <= 0)
-        {
-            count = 0;
-            enemyRenderer.sprite = sprites[0];
-            GameManager.Instance.population = GameManager.Instance.maxPopul;
-            for (int i = 0; i < 5; i++)
-            {
-                enemyHP[i] = enemyMaxHP[i];
             }
         }
 
@@ -113,7 +110,7 @@ public class Enemy : MonoBehaviour
         // stage change speed
         if (count == 4) // Boss
         {
-            if (killTime > 0.03) // More Fast
+            if (killTime > 0.05) // More Fast
             {
                 GameManager.Instance.population -= KillSpeedControl;
                 killTime = 0.0f;
@@ -121,7 +118,7 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            if (killTime > 0.05)
+            if (killTime > 0.08)
             {
                 GameManager.Instance.population -= KillSpeedControl;
                 killTime = 0.0f;

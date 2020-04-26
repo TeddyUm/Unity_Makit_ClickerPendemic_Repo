@@ -60,6 +60,9 @@ public class Skill : MonoBehaviour
 
     void Update()
     {
+        // From Store
+        GameManager.Instance.damageSkill = (GameManager.Instance.playerDamage * GameManager.Instance.SkillControl);
+
         // damage skill cooltime check and active
         if (newsIsClicked)
         {

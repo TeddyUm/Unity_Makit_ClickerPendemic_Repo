@@ -32,6 +32,10 @@ public class Stage1UI : MonoBehaviour
     {
         // Money Text
         Text money_text = GameObject.FindGameObjectWithTag("Money").GetComponentInChildren<Text>();
+        if (GameManager.Instance.money <= 0)
+        {
+            GameManager.Instance.money = 0;
+        }
         money_text.text = string.Format("{0:n0}", GameManager.Instance.money);
 
         // Time print UI evey tick

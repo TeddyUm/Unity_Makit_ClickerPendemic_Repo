@@ -10,12 +10,6 @@ public class StageLoading : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
         switch (GameManager.Instance.currentScene)
         {
             case 1:
@@ -30,7 +24,11 @@ public class StageLoading : MonoBehaviour
             default:
                 break;
         }
+    }
 
+    // Update is called once per frame
+    void Update()
+    {
         if(Input.GetKeyDown(KeyCode.Space))
         {
             switch (GameManager.Instance.currentScene)

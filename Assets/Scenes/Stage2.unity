@@ -2753,7 +2753,7 @@ Transform:
   - {fileID: 549615110}
   - {fileID: 1796269656}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &499498037
 GameObject:
@@ -8382,7 +8382,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1351996697
 GameObject:
@@ -10752,7 +10752,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b6bd7f81f806b34d803f422191158e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reset_population: 2000
   enemyHP: 400600006c070000c4090000b80b0000a00f0000
   enemyName:
   - Methemoglobinemia 1
@@ -10761,11 +10760,11 @@ MonoBehaviour:
   - Methemoglobinemia 4
   - Boss2
   sprites:
-  - {fileID: 21300000, guid: 8afd5b292102deb4eb552b9530bb9ea1, type: 3}
-  - {fileID: 21300000, guid: bffc99dad1cc95d478fb103cd44ae3aa, type: 3}
-  - {fileID: 21300000, guid: 4408269a96438e84796304f4ac0ed623, type: 3}
-  - {fileID: 21300000, guid: 4461c87bad5222349b14c22b26d43b95, type: 3}
-  - {fileID: 21300000, guid: 68e1f3d1470827b49b3b3347af0e4f6d, type: 3}
+  - {fileID: 21300000, guid: 7dc7006eff9bf3b468c8c8f32dfde565, type: 3}
+  - {fileID: 21300000, guid: 83cf606b4ae06b440b0c1bbd36e7cbd7, type: 3}
+  - {fileID: 21300000, guid: cfd220afa00c73b43be18d2683781467, type: 3}
+  - {fileID: 21300000, guid: d86525a070a00e241bee0cc2e1a28e32, type: 3}
+  - {fileID: 21300000, guid: f8739f749eb50ae47b117ea046f82bb9, type: 3}
   hpNum: {fileID: 881827446}
   stage: {fileID: 0}
   KillSpeedControl: 4
@@ -10831,7 +10830,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1767176398
 GameObject:
@@ -12032,6 +12031,7 @@ MonoBehaviour:
   follower3Damage: 50
   follower4Damage: 100
   currentScene: 0
+  SkillControl: 2
   damageSkill: 100
   moneySkill: 100
   healSkill: 100
@@ -12099,7 +12099,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1978317757
 GameObject:

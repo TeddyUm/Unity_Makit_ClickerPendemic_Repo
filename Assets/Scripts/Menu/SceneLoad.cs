@@ -43,15 +43,6 @@ public class SceneLoad : MonoBehaviour
         {
             yield return null;
 
-            if(loadType == 0)
-            {
-                Debug.Log("New Game");
-            }
-            else if (loadType == 1)
-            {
-                Debug.Log("Old Game");
-            }
-
             if(progressbar.value < 0.9f)
             {
                 progressbar.value = Mathf.MoveTowards(progressbar.value, 0.9f, Time.deltaTime);

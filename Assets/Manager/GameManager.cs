@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public int follower4Damage = 100; // follower4 damage
     public int currentScene = 0;        // scene number
 
+    public int SkillControl = 2;
     public int damageSkill = 50;        // damage skill amount
     public int moneySkill = 1000;        // money skill amount
     public int healSkill;        // heal skill amount

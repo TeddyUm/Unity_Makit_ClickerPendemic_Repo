@@ -60,7 +60,7 @@ public class Shop_Player : MonoBehaviour
 
             // Fix later
             shop_Player_2_price += 400;
-            GameManager.Instance.damageSkill += (GameManager.Instance.playerDamage * 2);
+            GameManager.Instance.SkillControl += 1;
         }
 
     }
