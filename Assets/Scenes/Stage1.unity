@@ -962,11 +962,11 @@ MonoBehaviour:
   - Gangrene 4
   - BlackDeath
   sprites:
-  - {fileID: 21300000, guid: be26e683bea7d234d96b522c6def0114, type: 3}
-  - {fileID: 21300000, guid: fb35bb1ef70235c41ad3216892eafeda, type: 3}
-  - {fileID: 21300000, guid: 74d7c6ffabe982041b52a912c9820990, type: 3}
-  - {fileID: 21300000, guid: eee2de4370b9d4c48931d7c19e057805, type: 3}
-  - {fileID: 21300000, guid: 0cf8f59b949e24a4b95ff41c477ab585, type: 3}
+  - {fileID: 21300000, guid: e8fdbc41599d83045862987144790b4e, type: 3}
+  - {fileID: 21300000, guid: 520593e69967e73448c73f4910126f14, type: 3}
+  - {fileID: 21300000, guid: ae0f8f2af1e67014eacd77e4db4cac42, type: 3}
+  - {fileID: 21300000, guid: 870e0744beb1b0746848197d7f7118cb, type: 3}
+  - {fileID: 21300000, guid: 56affdf3a7e87b84db184ae0113b1115, type: 3}
   hpNum: {fileID: 1584891626}
   stage: {fileID: 0}
   KillSpeedControl: 1
@@ -3662,7 +3662,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   population: 450
   money: 0
-  playerDamage: 5
+  playerDamage: 1000
   follower1Damage: 10
   follower2Damage: 20
   follower3Damage: 50

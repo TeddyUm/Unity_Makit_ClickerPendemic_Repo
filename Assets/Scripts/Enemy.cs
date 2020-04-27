@@ -56,7 +56,7 @@ public class Enemy : MonoBehaviour
         {
             if (count == 4) // boss
             {
-                count--;
+                count = 0;
             }
             GameManager.Instance.population = GameManager.Instance.maxPopul;
             for (int i = 0; i < 5; i++)

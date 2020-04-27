@@ -8424,11 +8424,11 @@ MonoBehaviour:
   - Fever 4
   - Boss3
   sprites:
-  - {fileID: 21300000, guid: 8afd5b292102deb4eb552b9530bb9ea1, type: 3}
-  - {fileID: 21300000, guid: bffc99dad1cc95d478fb103cd44ae3aa, type: 3}
-  - {fileID: 21300000, guid: 4408269a96438e84796304f4ac0ed623, type: 3}
-  - {fileID: 21300000, guid: 4461c87bad5222349b14c22b26d43b95, type: 3}
-  - {fileID: 21300000, guid: 68e1f3d1470827b49b3b3347af0e4f6d, type: 3}
+  - {fileID: 21300000, guid: 98fa1d93b64970640bba764702acbfd2, type: 3}
+  - {fileID: 21300000, guid: 5e3803d0b4a015c4fb249412eb895800, type: 3}
+  - {fileID: 21300000, guid: d7cac0ddb073f884aa84fd869ecf5dbd, type: 3}
+  - {fileID: 21300000, guid: 74b5bf82bd9f3c0409df73d55abc0898, type: 3}
+  - {fileID: 21300000, guid: 9c272ef7bf4e9744b9adfe71e92e5de7, type: 3}
   hpNum: {fileID: 1928211710}
   stage: {fileID: 0}
   KillSpeedControl: 15
@@ -8491,7 +8491,7 @@ Transform:
   m_GameObject: {fileID: 1301508414}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.03, y: 1.07, z: -2.5113983}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
