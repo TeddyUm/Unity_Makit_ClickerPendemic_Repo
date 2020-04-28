@@ -4,9 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Shop_Player : MonoBehaviour
 {
+
     public Text[] shop_Player_level;
     public Text[] shop_Player_Des;
-    private static int[] shop_Player_amount = new int[4];
+    private static int[] shop_Player_amount = { 1, 1, 1, 1 };
     public Text[] Player_money_text;
 
     // Basic price
@@ -15,26 +16,29 @@ public class Shop_Player : MonoBehaviour
     private static int shop_Player_3_price = 700;
     private static int shop_Player_4_price = 850;
 
+
+    void Start()
+    {
+
+        shop_Player_Des[0].text = "Public anger";
+        shop_Player_Des[1].text = "Breaking News";
+        shop_Player_Des[2].text = "Emergency Fund";
+        shop_Player_Des[3].text = "Medical Supply";
+    }
+
     private void Update()
     {
-        shop_Player_amount[0] = 1;
         shop_Player_level[0].text = "Lv. " + shop_Player_amount[0];
-        shop_Player_Des[0].text = "Public anger";
         Player_money_text[0].text = string.Format("{0:n0}", shop_Player_1_price);
+        Debug.Log(shop_Player_amount[0]);
 
-        shop_Player_amount[1] = 1;
         shop_Player_level[1].text = "Lv. " + shop_Player_amount[1];
-        shop_Player_Des[1].text = "Breaking News";
         Player_money_text[1].text = string.Format("{0:n0}", shop_Player_2_price);
 
-        shop_Player_amount[2] = 1;
         shop_Player_level[2].text = "Lv. " + shop_Player_amount[2];
-        shop_Player_Des[2].text = "Emergency Fund"; 
         Player_money_text[2].text = string.Format("{0:n0}", shop_Player_3_price);
 
-        shop_Player_amount[3] = 1;
         shop_Player_level[3].text = "Lv. " + shop_Player_amount[3];
-        shop_Player_Des[3].text = "Medical Supply";
         Player_money_text[3].text = string.Format("{0:n0}", shop_Player_4_price);
     }
 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class Player : MonoBehaviour
 {
@@ -18,6 +19,14 @@ public class Player : MonoBehaviour
     {
         
     }
+    private bool IsPointerOverUIObject()
+    {
+        PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
+        eventDataCurrentPosition.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
+        return results.Count > 0;
+    }
 
     // Update is called once per frame
     void Update()
@@ -31,18 +40,21 @@ public class Player : MonoBehaviour
             attackCount = 0.0f;
         }
 
-        // Touch and take a damage, Using Raycast
-        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        RaycastHit2D rayHit = Physics2D.Raycast(mousePos, Vector2.zero);
-
-        if(rayHit.collider != null)
+        if (Input.GetMouseButtonDown(0) && !IsPointerOverUIObject())
         {
-            if (rayHit.collider == touch && Input.GetMouseButtonDown(0))
+            // Touch and take a damage, Using Raycast
+            Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            RaycastHit2D rayHit = Physics2D.Raycast(mousePos, Vector2.zero);
+
+            if (rayHit.collider != null)
             {
-                Instantiate(textObj, new Vector2(Screen.width / 2, Screen.height / 2), Quaternion.identity);
-                Instantiate(tabEffect, mousePos, Quaternion.identity);
-                enemy.SetEnemyHP(enemy.getEnemyHP() - GameManager.Instance.playerDamage);
-                SoundManager.Instance.PlayTabSound();
+                if (rayHit.collider == touch && Input.GetMouseButtonDown(0))
+                {
+                    Instantiate(textObj, new Vector2(Screen.width / 2, Screen.height / 2), Quaternion.identity);
+                    Instantiate(tabEffect, mousePos, Quaternion.identity);
+                    enemy.SetEnemyHP(enemy.getEnemyHP() - GameManager.Instance.playerDamage);
+                    SoundManager.Instance.PlayTabSound();
+                }
             }
         }
     }

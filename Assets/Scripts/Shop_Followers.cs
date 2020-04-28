@@ -7,7 +7,7 @@ public class Shop_Followers : MonoBehaviour
 {
     public Text[] shop_Follower_level;
     public Text[] shop_Follower_Des;
-    private static int[] shop_Follower_amount = new int[4];
+    private static int[] shop_Follower_amount = { 1, 1, 1, 1 };
     public Text[] Follower_money_text;
 
     // Basic price
@@ -15,28 +15,28 @@ public class Shop_Followers : MonoBehaviour
     private static int shop_Follower_2_price = 2500;
     private static int shop_Follower_3_price = 4000;
     private static int shop_Follower_4_price = 6500;
+    
+    void Start()
+    {
+        shop_Follower_Des[0].text = "black Death doctor";
+        shop_Follower_Des[1].text = "Flue doctor";
+        shop_Follower_Des[2].text = "Operating doctor";
+        shop_Follower_Des[3].text = "Veiled doctor";
+    }
 
     private void Update()
     {
-        shop_Follower_amount[0] = 1;
         shop_Follower_level[0].text = "Lv. " + shop_Follower_amount[0];
-        shop_Follower_Des[0].text = "black Death doctor";
         Follower_money_text[0].text = string.Format("{0:n0}", shop_Follower_1_price);
 
-        shop_Follower_amount[1] = 1;
         shop_Follower_level[1].text = "Lv. " + shop_Follower_amount[1];
-        shop_Follower_Des[1].text = "Flue doctor";
         Follower_money_text[1].text = string.Format("{0:n0}", shop_Follower_2_price);
 
-        shop_Follower_amount[2] = 1;
         shop_Follower_level[2].text = "Lv. " + shop_Follower_amount[2];
-        shop_Follower_Des[2].text = "Operating doctor";
         Follower_money_text[2].text = string.Format("{0:n0}", shop_Follower_3_price);
 
-        shop_Follower_amount[3] = 1;
         shop_Follower_level[3].text = "Lv. " + shop_Follower_amount[3];
-        shop_Follower_Des[3].text = "Veiled doctor";
-        Follower_money_text[3].text = string.Format("{0:n0}", shop_Follower_4_price);
+        Follower_money_text[3].text = string.Format("{0:n0}", shop_Follower_4_price + 1);
     }
 
     public void shop_Follower_1()

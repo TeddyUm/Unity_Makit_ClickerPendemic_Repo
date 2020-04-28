@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     private static GameManager instance = null;
 
     // main data
-    public int population = 400;        // time
+    public int population = 450;        // time
     public int money = 0;               // money
     public int playerDamage = 5;       // damage
     public int follower1Damage = 10;    // follower1 damage
