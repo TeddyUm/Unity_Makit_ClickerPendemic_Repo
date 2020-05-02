@@ -3529,7 +3529,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   population: 450
   money: 0
-  playerDamage: 5
+  playerDamage: 1500
   follower1Damage: 10
   follower2Damage: 20
   follower3Damage: 50
