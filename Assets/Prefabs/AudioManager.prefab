@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &240268145035702196
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1592188732137409315}
+  - component: {fileID: 4914206592230172716}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1592188732137409315
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 240268145035702196}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.8560693, y: -0.9701463, z: -0.45339972}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4914206592230172716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 240268145035702196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 067425a5670b4e14cbbdfbc555e4b64c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Button
+    clip: {fileID: 8300000, guid: 58ca31b0df6f6154c99bd7fcafbf54c7, type: 3}
+    source: {fileID: 0}
+    Audio_Volumn: 1
+    loop: 0
+  - name: Tab
+    clip: {fileID: 8300000, guid: efc16359355bff94da1ef0d1be97302d, type: 3}
+    source: {fileID: 0}
+    Audio_Volumn: 1
+    loop: 0
+  - name: buy_item
+    clip: {fileID: 8300000, guid: 8e0ebd2a7df79aa42ba52faeffe23fd9, type: 3}
+    source: {fileID: 0}
+    Audio_Volumn: 1
+    loop: 0
+  - name: error
+    clip: {fileID: 8300000, guid: 0dc74330b5318bd4683b3229bd1264c0, type: 3}
+    source: {fileID: 0}
+    Audio_Volumn: 1
+    loop: 0
+  - name: Skill
+    clip: {fileID: 8300000, guid: de4359bdb70abe74badb5126d66d2ea4, type: 3}
+    source: {fileID: 0}
+    Audio_Volumn: 1
+    loop: 0

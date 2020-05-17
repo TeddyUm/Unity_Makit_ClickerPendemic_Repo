@@ -14,11 +14,9 @@ public class Player : MonoBehaviour
     private float attackCount;
     public GameObject tabEffect;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [Header("Sounds")]
+    private string Btn_Tab_sound = "Tab";
+
     private bool IsPointerOverUIObject()
     {
         PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
@@ -53,7 +51,7 @@ public class Player : MonoBehaviour
                     Instantiate(textObj, new Vector2(Screen.width / 2, Screen.height / 2), Quaternion.identity);
                     Instantiate(tabEffect, mousePos, Quaternion.identity);
                     enemy.SetEnemyHP(enemy.getEnemyHP() - GameManager.Instance.playerDamage);
-                    SoundManager.Instance.PlayTabSound();
+                    AudioManager.Instance.Play(Btn_Tab_sound);
                 }
             }
         }

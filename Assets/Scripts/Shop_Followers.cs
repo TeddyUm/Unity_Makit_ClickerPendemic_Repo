@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Shop_Followers : MonoBehaviour
 {
+    [Header("Follower Shop Information")]
     public Text[] shop_Follower_level;
     public Text[] shop_Follower_Des;
     private static int[] shop_Follower_amount = { 1, 1, 1, 1 };
@@ -15,7 +16,11 @@ public class Shop_Followers : MonoBehaviour
     private static int shop_Follower_2_price = 2500;
     private static int shop_Follower_3_price = 4000;
     private static int shop_Follower_4_price = 6500;
-    
+
+    [Header("Sounds")]
+    private string Btn_buy_sound = "buy_item";
+    private string error_sound = "error";
+
     void Start()
     {
         shop_Follower_Des[0].text = "black Death doctor";
@@ -43,6 +48,8 @@ public class Shop_Followers : MonoBehaviour
     {
         if (GameManager.Instance.money >= shop_Follower_1_price)
         {
+            Get_Btn_buy_sound();
+
             GameManager.Instance.money -= shop_Follower_1_price;
             shop_Follower_amount[0] += 1;
 
@@ -50,13 +57,18 @@ public class Shop_Followers : MonoBehaviour
             shop_Follower_1_price += 200;
             GameManager.Instance.follower1Damage += 15;
         }
+        else
+        {
+            Get_eroor_sound();
+        }
     }
 
     public void shop_Follower_2()
     {
-
         if (GameManager.Instance.money >= shop_Follower_2_price)
         {
+            Get_Btn_buy_sound();
+
             GameManager.Instance.money -= shop_Follower_2_price;
             shop_Follower_amount[1] += 1;
 
@@ -64,13 +76,18 @@ public class Shop_Followers : MonoBehaviour
             shop_Follower_2_price += 350;
             GameManager.Instance.follower2Damage += 20;
         }
-
+        else
+        {
+            Get_eroor_sound();
+        }
     }
 
     public void shop_Follower_3()
     {
         if (GameManager.Instance.money >= shop_Follower_3_price)
         {
+            Get_Btn_buy_sound();
+
             GameManager.Instance.money -= shop_Follower_3_price;
             shop_Follower_amount[2] += 1;
 
@@ -78,12 +95,18 @@ public class Shop_Followers : MonoBehaviour
             shop_Follower_3_price += 500;
             GameManager.Instance.follower3Damage += 25;
         }
+        else
+        {
+            Get_eroor_sound();
+        }
     }
 
     public void shop_Follower_4()
     {
         if (GameManager.Instance.money >= shop_Follower_4_price)
         {
+            Get_Btn_buy_sound();
+
             GameManager.Instance.money -= shop_Follower_4_price;
             shop_Follower_amount[3] += 1;
 
@@ -91,5 +114,18 @@ public class Shop_Followers : MonoBehaviour
             shop_Follower_4_price += 700;
             GameManager.Instance.follower4Damage += 30;
         }
+        else
+        {
+            Get_eroor_sound();
+        }
+    }
+
+    public void Get_Btn_buy_sound()
+    {
+        AudioManager.Instance.Play(Btn_buy_sound);
+    }
+    public void Get_eroor_sound()
+    {
+        AudioManager.Instance.Play(error_sound);
     }
 }

@@ -36,7 +36,10 @@ public class Skill : MonoBehaviour
     private bool medicalIsClicked = false;
 
     private float speed = 5.0f;
-    // Start is called before the first frame update
+
+    [Header("Sounds")]
+    private string Btn_skill_sound = "Skill";
+
     void Start()
     {
         GameManager.Instance.healSkill = (GameManager.Instance.population / 10);
@@ -127,6 +130,7 @@ public class Skill : MonoBehaviour
     // damage skill cooltime
     public void NewsStartCoolTime()
     {
+        Get_skill_sound();
         newsLeftTime = newsCooltime;
         newsIsClicked = true;
         if (buttonNews)
@@ -136,6 +140,7 @@ public class Skill : MonoBehaviour
     // money skill cooltime
     public void FundStartCoolTime()
     {
+        Get_skill_sound();
         fundLeftTime = fundCooltime;
         fundIsClicked = true;
         if (buttonFund)
@@ -145,6 +150,7 @@ public class Skill : MonoBehaviour
     // heal skill cooltime
     public void MedStartCoolTime()
     {
+        Get_skill_sound();
         medicalLeftTime = medicalCooltime;
         medicalIsClicked = true;
         if (buttonMedical)
@@ -173,5 +179,10 @@ public class Skill : MonoBehaviour
         // money skill
         Instantiate(moneyObj, new Vector2(Screen.width / 2, Screen.height / 2), Quaternion.identity);
         GameManager.Instance.money += GameManager.Instance.moneySkill;
+    }
+
+    public void Get_skill_sound()
+    {
+        AudioManager.Instance.Play(Btn_skill_sound);
     }
 }
