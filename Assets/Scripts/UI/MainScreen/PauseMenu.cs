@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
+
 public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
@@ -12,7 +14,10 @@ public class PauseMenu : MonoBehaviour
     private bool OptionMenu_Actived = false;
 
     [Header("Sounds")]
-    public string Btn_click_sound;
+    private string Btn_click_sound = "Button";
+
+    public GameObject Slider_BGM;
+    public GameObject Slider_Sound;
 
     public void Resume()
     {
@@ -41,6 +46,23 @@ public class PauseMenu : MonoBehaviour
         Debug.Log("QuitGame");
         Application.Quit();
     }
+
+    private void Start()
+    {
+        Slider_BGM.GetComponent<Slider>().value = BGMManager.instance.BGM_Volume;
+        Slider_Sound.GetComponent<Slider>().value = AudioManager.Instance.Stage_Sound_Volume;
+    }
+
+    public void SetBGMVolum(float _volumn)
+    {
+        BGMManager.instance.BGM_Volume = _volumn;
+    }
+
+    public void SetSoundVolum(float _volumn)
+    {
+        AudioManager.Instance.SetVolum(_volumn);
+    }
+
 
     public void Get_Btn_click_sound()
     {

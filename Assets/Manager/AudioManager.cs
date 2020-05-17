@@ -34,6 +34,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField]
 
     public Sound[] sounds;
+    public float Stage_Sound_Volume = 1f;
 
     #region Singleton
     private static AudioManager instance = null;
@@ -102,6 +103,7 @@ public class AudioManager : MonoBehaviour
         {
             sounds[i].Audio_Volumn = _volumn;
         }
+        Stage_Sound_Volume = _volumn;
     }
 
     public void Stop(string _name)

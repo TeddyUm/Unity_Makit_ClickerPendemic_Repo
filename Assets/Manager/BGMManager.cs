@@ -8,7 +8,7 @@ public class BGMManager : MonoBehaviour
     public AudioClip[] clips;   // BGMs
     private AudioSource source;
 
-    private float BGM_Volume = 1f;
+    public float BGM_Volume;
 
     private WaitForSeconds waitTime = new WaitForSeconds(0.01f);
 
@@ -31,6 +31,7 @@ public class BGMManager : MonoBehaviour
     // Rene part function
     void Start()
     {
+        BGM_Volume = 1f;
         source = GetComponent<AudioSource>();
     }
 

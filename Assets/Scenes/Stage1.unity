@@ -960,7 +960,6 @@ MonoBehaviour:
   enemy: {fileID: 166629310}
   attackTimer: 1
   tabEffect: {fileID: 100000, guid: f06e78284f831ae469c74624ab5d513b, type: 3}
-  Btn_Tab_sound: Tab
 --- !u!212 &188262839
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4732,18 +4731,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 745c768a7739b434695da6d15dc03c40, type: 3}
---- !u!114 &1079456268 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6478089106993793883, guid: 745c768a7739b434695da6d15dc03c40,
-    type: 3}
-  m_PrefabInstance: {fileID: 1079456267}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fb35fa6f81ebd24bb850b6238698b21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1087145049
 GameObject:
   m_ObjectHideFlags: 0
@@ -7525,18 +7512,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1683871529}
   m_CullTransparentMesh: 0
---- !u!114 &1738720770 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4914206592230172716, guid: fcf57ebe18f845748a0e5644ad911947,
-    type: 3}
-  m_PrefabInstance: {fileID: 4914206590663519790}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 067425a5670b4e14cbbdfbc555e4b64c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1742021820
 GameObject:
   m_ObjectHideFlags: 0
@@ -10793,7 +10768,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1079456268}
+      objectReference: {fileID: 1277653934}
+    - target: {fileID: 2279750662456139752, guid: 72dbc9435c7c3ab44a436a6f3798eea5,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetBGMVolum
+      objectReference: {fileID: 0}
     - target: {fileID: 2279750663381669658, guid: 72dbc9435c7c3ab44a436a6f3798eea5,
         type: 3}
       propertyPath: m_IsActive
@@ -10813,7 +10793,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1738720770}
+      objectReference: {fileID: 1277653934}
+    - target: {fileID: 2279750664017834176, guid: 72dbc9435c7c3ab44a436a6f3798eea5,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetSoundVolum
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72dbc9435c7c3ab44a436a6f3798eea5, type: 3}
 --- !u!1001 &4914206590663519790

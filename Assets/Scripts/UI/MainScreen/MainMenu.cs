@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
@@ -15,8 +16,14 @@ public class MainMenu : MonoBehaviour
     [Header("Sounds")]
     public string Btn_click_sound;
 
+    public GameObject Slider_BGM;
+    public GameObject Slider_Sound;
+
     void Start()
     {
+        Slider_BGM.GetComponent<Slider>().value = BGMManager.instance.BGM_Volume;
+        Slider_Sound.GetComponent<Slider>().value = AudioManager.Instance.Stage_Sound_Volume;
+
         BGMManager.instance.Play(0);
     }
 
@@ -47,6 +54,16 @@ public class MainMenu : MonoBehaviour
         Get_Btn_click_sound();
         Debug.Log("Quit");
         Application.Quit();
+    }
+
+    public void SetBGMVolum(float _volumn)
+    {
+        BGMManager.instance.BGM_Volume = _volumn;
+    }
+
+    public void SetSoundVolum(float _volumn)
+    {
+        AudioManager.Instance.SetVolum(_volumn);
     }
 
     public void Get_Btn_click_sound()

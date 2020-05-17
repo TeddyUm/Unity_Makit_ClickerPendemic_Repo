@@ -780,9 +780,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6478089106993793883, guid: 745c768a7739b434695da6d15dc03c40,
-          type: 3}
-        m_MethodName: SetVolum
+      - m_Target: {fileID: 2279750662178204907}
+        m_MethodName: SetBGMVolum
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1647,7 +1646,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 2279750663381669658}
   OptionMenuUI: {fileID: 2279750663836780556}
-  Btn_click_sound: Button
+  Slider_BGM: {fileID: 2279750662456139758}
+  Slider_Sound: {fileID: 2279750664017834182}
 --- !u!1 &2279750663680155224
 GameObject:
   m_ObjectHideFlags: 0
@@ -2429,9 +2429,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4914206592230172716, guid: fcf57ebe18f845748a0e5644ad911947,
-          type: 3}
-        m_MethodName: SetVolum
+      - m_Target: {fileID: 2279750662178204907}
+        m_MethodName: SetSoundVolum
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
