@@ -17,6 +17,10 @@ public class Skill : MonoBehaviour
     public GameObject textObj;
     public GameObject healObj;
     public GameObject moneyObj;
+    public GameObject Skill1Obj;
+    public GameObject Skill2Obj;
+    public GameObject Skill3Obj;
+    public GameObject SkillEffectObj;
 
     public GameObject skillEffect;
     public Enemy enemy;
@@ -34,6 +38,10 @@ public class Skill : MonoBehaviour
     private bool newsIsClicked = false;
     private bool fundIsClicked = false;
     private bool medicalIsClicked = false;
+
+    private bool newsIsFulled = false;
+    private bool fundIsFulled = false;
+    private bool medicalIsFulled = false;
 
     private float speed = 5.0f;
 
@@ -63,8 +71,12 @@ public class Skill : MonoBehaviour
 
     void Update()
     {
-        // From Store
-        GameManager.Instance.damageSkill = (GameManager.Instance.playerDamage * GameManager.Instance.SkillControl);
+        newsIsFulled = false;
+        fundIsFulled = false;
+        medicalIsFulled = false;
+
+         // From Store
+         GameManager.Instance.damageSkill = (GameManager.Instance.playerDamage * GameManager.Instance.SkillControl);
 
         // damage skill cooltime check and active
         if (newsIsClicked)
@@ -78,6 +90,11 @@ public class Skill : MonoBehaviour
                     if (buttonNews)
                     {
                         buttonNews.enabled = true;
+                        newsIsFulled = true;
+                        if (newsIsFulled)
+                        {
+                            Instantiate(SkillEffectObj, Skill1Obj.transform.position, Quaternion.identity);
+                        }
                     }
                     newsIsClicked = true;
                 }
@@ -98,6 +115,11 @@ public class Skill : MonoBehaviour
                     if (buttonFund)
                     {
                         buttonFund.enabled = true;
+                        fundIsFulled = true;
+                        if(fundIsFulled)
+                        {
+                            Instantiate(SkillEffectObj, Skill2Obj.transform.position, Quaternion.identity);
+                        }
                     }
                     fundIsClicked = true;
                 }
@@ -118,8 +140,18 @@ public class Skill : MonoBehaviour
                     if (buttonMedical)
                     {
                         buttonMedical.enabled = true;
+                        medicalIsFulled = true;
+                        if (medicalIsFulled)
+                        {
+                            Instantiate(SkillEffectObj, Skill3Obj.transform.position, Quaternion.identity);
+                        }
+
                     }
                     medicalIsClicked = true;
+                    if (newsIsFulled)
+                    {
+                        Instantiate(SkillEffectObj, Skill1Obj.transform.position, Quaternion.identity);
+                    }
                 }
                 float ratio = 1.0f - (medicalLeftTime / medicalCooltime);
                 if (skillMedical)

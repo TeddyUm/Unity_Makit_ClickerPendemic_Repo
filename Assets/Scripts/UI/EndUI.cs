@@ -5,26 +5,54 @@ using UnityEngine;
 
 public class EndUI : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [Header("Sounds")]
+    private string Btn_click_sound = "Button";
+
+    public Shop_Followers sf;
+
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
+        BGMManager.instance.Play(6);
     }
 
     public void MainScreen()
     {
-        Debug.Log("test");
+        // init data
+        GameManager.Instance.population = 450;      
+        GameManager.Instance.money = 0;             
+        GameManager.Instance.playerDamage = 5;      
+        GameManager.Instance.follower1Damage = 10;  
+        GameManager.Instance.follower2Damage = 20;  
+        GameManager.Instance.follower3Damage = 50;  
+        GameManager.Instance.follower4Damage = 100; 
+        GameManager.Instance.currentScene = 0;      
+
+        GameManager.Instance.SkillControl = 2;
+        GameManager.Instance.damageSkill = 50;      
+        GameManager.Instance.moneySkill = 1000;     
+
+        GameManager.Instance.maxPopul = 1000;
+        GameManager.Instance.maxEnemyHP = 1000;
+
+        sf.init_follower();
+
+
+        Get_Btn_click_sound();
         GameManager.Instance.SceneChange("MainScreen");
+
+
     }
 
     public void QuitGame()
     {
+        Get_Btn_click_sound();
+        BGMManager.instance.Stop();
+
         Application.Quit();
     }
 
+    public void Get_Btn_click_sound()
+    {
+        AudioManager.Instance.Play(Btn_click_sound);
+    }
 }

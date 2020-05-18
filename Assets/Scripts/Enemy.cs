@@ -54,10 +54,7 @@ public class Enemy : MonoBehaviour
         // if times up, restart the enemy
         if (GameManager.Instance.population <= 0)
         {
-            if (count == 4) // boss
-            {
-                count = 0;
-            }
+            count = 0;
             GameManager.Instance.population = GameManager.Instance.maxPopul;
             for (int i = 0; i < 5; i++)
             {

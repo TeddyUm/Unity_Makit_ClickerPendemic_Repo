@@ -63,7 +63,6 @@ public class PauseMenu : MonoBehaviour
         AudioManager.Instance.SetVolum(_volumn);
     }
 
-
     public void Get_Btn_click_sound()
     {
         AudioManager.Instance.Play(Btn_click_sound);

@@ -8,14 +8,14 @@ public class Shop_Followers : MonoBehaviour
     [Header("Follower Shop Information")]
     public Text[] shop_Follower_level;
     public Text[] shop_Follower_Des;
+    public GameObject[] shop_Follower_Max;
+    public GameObject[] shop_Follower_buy_btn;
     private static int[] shop_Follower_amount = { 1, 1, 1, 1 };
     public Text[] Follower_money_text;
+    private static int[] shop_Follower_lv_max = { 50, 45, 40, 30 };
 
     // Basic price
-    private static int shop_Follower_1_price = 1000;
-    private static int shop_Follower_2_price = 2500;
-    private static int shop_Follower_3_price = 4000;
-    private static int shop_Follower_4_price = 6500;
+    private static int[] shop_Follower_price = { 1000, 2500, 4000, 6500 };
 
     [Header("Sounds")]
     private string Btn_buy_sound = "buy_item";
@@ -31,93 +31,104 @@ public class Shop_Followers : MonoBehaviour
 
     private void Update()
     {
-        shop_Follower_level[0].text = "Lv. " + shop_Follower_amount[0];
-        Follower_money_text[0].text = string.Format("{0:n0}", shop_Follower_1_price);
+        for (int i = 0; i < shop_Follower_level.Length; i++)
+        {
+            shop_Follower_level[i].text = "Lv. " + shop_Follower_amount[i];
+            Follower_money_text[i].text = string.Format("{0:n0}", shop_Follower_price[i]);
+        }
 
-        shop_Follower_level[1].text = "Lv. " + shop_Follower_amount[1];
-        Follower_money_text[1].text = string.Format("{0:n0}", shop_Follower_2_price);
+        // Max lv Btn
+        for (int i = 0; i < shop_Follower_buy_btn.Length; i++)
+        {
+            if (shop_Follower_amount[i] >= shop_Follower_lv_max[i])
+            {
+                shop_Follower_buy_btn[i].SetActive(false);
+                shop_Follower_Max[i].SetActive(true);
+            }
+        }
 
-        shop_Follower_level[2].text = "Lv. " + shop_Follower_amount[2];
-        Follower_money_text[2].text = string.Format("{0:n0}", shop_Follower_3_price);
-
-        shop_Follower_level[3].text = "Lv. " + shop_Follower_amount[3];
-        Follower_money_text[3].text = string.Format("{0:n0}", shop_Follower_4_price + 1);
+        // Price Btn Deactivation
+        for (int i = 0; i < shop_Follower_price.Length; i++)
+        {
+            if (GameManager.Instance.money <= shop_Follower_price[i])
+            {
+                shop_Follower_buy_btn[i].GetComponent<Button>().interactable = false;
+                shop_Follower_buy_btn[i].GetComponent<Image>().color = new Color(255, 255, 255, 200);
+            }
+            else
+            {
+                shop_Follower_buy_btn[i].GetComponent<Button>().interactable = true;
+                shop_Follower_buy_btn[i].GetComponent<Image>().color = new Color(255, 255, 255, 255);
+            }
+        }
     }
 
     public void shop_Follower_1()
     {
-        if (GameManager.Instance.money >= shop_Follower_1_price)
+        if (GameManager.Instance.money >= shop_Follower_price[0])
         {
             Get_Btn_buy_sound();
 
-            GameManager.Instance.money -= shop_Follower_1_price;
+            GameManager.Instance.money -= shop_Follower_price[0];
             shop_Follower_amount[0] += 1;
 
             // Fix later
-            shop_Follower_1_price += 200;
+            shop_Follower_price[0] += 200;
             GameManager.Instance.follower1Damage += 15;
-        }
-        else
-        {
-            Get_eroor_sound();
         }
     }
 
     public void shop_Follower_2()
     {
-        if (GameManager.Instance.money >= shop_Follower_2_price)
+        if (GameManager.Instance.money >= shop_Follower_price[1])
         {
             Get_Btn_buy_sound();
 
-            GameManager.Instance.money -= shop_Follower_2_price;
+            GameManager.Instance.money -= shop_Follower_price[1];
             shop_Follower_amount[1] += 1;
 
             // Fix later
-            shop_Follower_2_price += 350;
+            shop_Follower_price[1] += 350;
             GameManager.Instance.follower2Damage += 20;
-        }
-        else
-        {
-            Get_eroor_sound();
         }
     }
 
     public void shop_Follower_3()
     {
-        if (GameManager.Instance.money >= shop_Follower_3_price)
+        if (GameManager.Instance.money >= shop_Follower_price[2])
         {
             Get_Btn_buy_sound();
 
-            GameManager.Instance.money -= shop_Follower_3_price;
+            GameManager.Instance.money -= shop_Follower_price[2];
             shop_Follower_amount[2] += 1;
 
             // Fix later
-            shop_Follower_3_price += 500;
+            shop_Follower_price[2] += 500;
             GameManager.Instance.follower3Damage += 25;
-        }
-        else
-        {
-            Get_eroor_sound();
         }
     }
 
     public void shop_Follower_4()
     {
-        if (GameManager.Instance.money >= shop_Follower_4_price)
+        if (GameManager.Instance.money >= shop_Follower_price[3])
         {
             Get_Btn_buy_sound();
 
-            GameManager.Instance.money -= shop_Follower_4_price;
+            GameManager.Instance.money -= shop_Follower_price[3];
             shop_Follower_amount[3] += 1;
 
             // Fix later
-            shop_Follower_4_price += 700;
+            shop_Follower_price[3] += 700;
             GameManager.Instance.follower4Damage += 30;
         }
-        else
-        {
-            Get_eroor_sound();
-        }
+    }
+
+    public void init_follower()
+    {
+        shop_Follower_amount[0] = 1;
+        shop_Follower_amount[1] = 1;
+        shop_Follower_amount[2] = 1;
+        shop_Follower_amount[3] = 1;
     }
 
     public void Get_Btn_buy_sound()

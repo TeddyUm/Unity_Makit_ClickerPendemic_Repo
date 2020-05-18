@@ -52,6 +52,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: e7cb5d31bbef41846ad656ec984b31d7, type: 3}
   - {fileID: 8300000, guid: 97bd7a5396819464c9aa65791ac67997, type: 3}
   - {fileID: 8300000, guid: e59c5de08cdd5ac48884e024e979d16b, type: 3}
+  BGM_Volume: 1
 --- !u!82 &7696208472123793575
 AudioSource:
   m_ObjectHideFlags: 0
