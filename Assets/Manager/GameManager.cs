@@ -26,6 +26,13 @@ public class GameManager : MonoBehaviour
     public int maxPopul = 1000;
     public int maxEnemyHP = 1000;
 
+    // Shops
+    public int[] shop_Player_amount = { 1, 1, 1, 1 };
+    public int[] shop_Player_price = { 500, 650, 700, 850 };
+
+    public int[] shop_Follower_amount = { 1, 1, 1, 1 };
+    public int[] shop_Follower_price = { 1000, 2500, 4000, 6500 };
+
     // Don't destroy
     private void Awake()
     {

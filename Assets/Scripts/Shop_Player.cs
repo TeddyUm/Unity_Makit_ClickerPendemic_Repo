@@ -8,14 +8,12 @@ public class Shop_Player : MonoBehaviour
     [Header("Player Shop Information")]
     public Text[] shop_Player_level;
     public Text[] shop_Player_Des;
-    public GameObject[] shop_Player_Max;
-    public GameObject[] shop_Player_buy_btn;
-    private static int[] shop_Player_amount = { 1, 1, 1, 1 };
     public Text[] Player_money_text;
     private static int[] shop_Player_lv_max = { 50, 30, 25, 30 };
 
-    // Basic price
-    private static int[] shop_Player_price = { 500, 650, 700, 850 };
+    // Btn
+    public GameObject[] shop_Player_Max;
+    public GameObject[] shop_Player_buy_btn;
 
     [Header("Sounds")]
     private string Btn_buy_sound = "buy_item";
@@ -34,14 +32,14 @@ public class Shop_Player : MonoBehaviour
         // Text 
         for (int i = 0; i < shop_Player_level.Length; i++)
         {
-            shop_Player_level[i].text = "Lv. " + shop_Player_amount[i];
-            Player_money_text[i].text = string.Format("{0:n0}", shop_Player_price[i]);
+            shop_Player_level[i].text = "Lv. " + GameManager.Instance.shop_Player_amount[i];
+            Player_money_text[i].text = string.Format("{0:n0}", GameManager.Instance.shop_Player_price[i]);
         }
 
         // Max lv Btn
         for(int i = 0; i < shop_Player_lv_max.Length; i++)
         {
-            if (shop_Player_amount[i] >= shop_Player_lv_max[i])
+            if (GameManager.Instance.shop_Player_amount[i] >= shop_Player_lv_max[i])
             {
                 shop_Player_buy_btn[i].SetActive(false);
                 shop_Player_Max[i].SetActive(true);
@@ -49,9 +47,9 @@ public class Shop_Player : MonoBehaviour
         }
 
         // Price Btn Deactivation
-        for (int i = 0; i < shop_Player_price.Length; i++)
+        for (int i = 0; i < GameManager.Instance.shop_Player_price.Length; i++)
         {
-            if (GameManager.Instance.money <= shop_Player_price[i])
+            if (GameManager.Instance.money < GameManager.Instance.shop_Player_price[i])
             {
                 shop_Player_buy_btn[i].GetComponent<Button>().interactable = false;
                 shop_Player_buy_btn[i].GetComponent<Image>().color = new Color(255, 255, 255, 200);
@@ -67,56 +65,56 @@ public class Shop_Player : MonoBehaviour
     public void shop_Player_1()
     {
         // Price
-        if (GameManager.Instance.money >= shop_Player_price[0])
+        if (GameManager.Instance.money >= GameManager.Instance.shop_Player_price[0])
         {
             Get_Btn_buy_sound();
-            GameManager.Instance.money -= shop_Player_price[0];
-            shop_Player_amount[0] += 1;
+            GameManager.Instance.money -= GameManager.Instance.shop_Player_price[0];
+            GameManager.Instance.shop_Player_amount[0] += 1;
 
             // Fix later
-            shop_Player_price[0] += 550;
+            GameManager.Instance.shop_Player_price[0] += 550;
             GameManager.Instance.playerDamage += 5;
         }
     }
 
     public void shop_Player_2()
     {
-        if (GameManager.Instance.money >= shop_Player_price[1])
+        if (GameManager.Instance.money >= GameManager.Instance.shop_Player_price[1])
         {
             Get_Btn_buy_sound();
-            GameManager.Instance.money -= shop_Player_price[1];
-            shop_Player_amount[1] += 1;
+            GameManager.Instance.money -= GameManager.Instance.shop_Player_price[1];
+            GameManager.Instance.shop_Player_amount[1] += 1;
 
             // Fix later
-            shop_Player_price[1] += 400;
+            GameManager.Instance.shop_Player_price[1] += 400;
             GameManager.Instance.SkillControl += 1;
         }
     }
 
     public void shop_Player_3()
     {
-        if (GameManager.Instance.money >= shop_Player_price[2])
+        if (GameManager.Instance.money >= GameManager.Instance.shop_Player_price[2])
         {
             Get_Btn_buy_sound();
-            GameManager.Instance.money -= shop_Player_price[2];
-            shop_Player_amount[2] += 1;
+            GameManager.Instance.money -= GameManager.Instance.shop_Player_price[2];
+            GameManager.Instance.shop_Player_amount[2] += 1;
 
             // Fix later
-            shop_Player_price[2] += 500;
+            GameManager.Instance.shop_Player_price[2] += 500;
             GameManager.Instance.moneySkill += 300;
         }
     }
 
     public void shop_Player_4()
     {
-        if (GameManager.Instance.money >= shop_Player_price[3])
+        if (GameManager.Instance.money >= GameManager.Instance.shop_Player_price[3])
         {
             Get_Btn_buy_sound();
-            GameManager.Instance.money -= shop_Player_price[3];
-            shop_Player_amount[3] += 1;
+            GameManager.Instance.money -= GameManager.Instance.shop_Player_price[3];
+            GameManager.Instance.shop_Player_amount[3] += 1;
 
             // Fix later
-            shop_Player_price[3] += 600;
+            GameManager.Instance.shop_Player_price[3] += 600;
             GameManager.Instance.healSkill += (GameManager.Instance.population / 10);
         }
     }

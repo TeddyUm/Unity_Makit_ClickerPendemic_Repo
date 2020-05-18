@@ -18,6 +18,7 @@ public class MainMenu : MonoBehaviour
 
     public GameObject Slider_BGM;
     public GameObject Slider_Sound;
+    public GameObject quit_Panel;
 
     void Start()
     {
@@ -52,8 +53,17 @@ public class MainMenu : MonoBehaviour
     public void QuitGame()
     {
         Get_Btn_click_sound();
-        Debug.Log("Quit");
+        quit_Panel.SetActive(true);
+    }
+
+    public void QuitConfirmGame()
+    {
+        Get_Btn_click_sound();
         Application.Quit();
+    }
+    public void QuitCancelGame()
+    {
+        quit_Panel.SetActive(false);
     }
 
     public void SetBGMVolum(float _volumn)
