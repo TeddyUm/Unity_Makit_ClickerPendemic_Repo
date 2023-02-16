@@ -41,9 +41,12 @@ public class Follower : MonoBehaviour
         attackCount += Time.deltaTime;
         if(attackCount > attackDelay)
         {
-            enemy.SetEnemyHP(enemy.getEnemyHP() - damage);
-            Instantiate(textObj, transform.position, Quaternion.identity);
-            attackCount = 0;
+            if (enemy.enabled)
+            {
+                enemy.SetEnemyHP(enemy.getEnemyHP() - damage);
+                Instantiate(textObj, transform.position, Quaternion.identity);
+                attackCount = 0;
+            }
         }
     }
 }

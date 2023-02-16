@@ -87,15 +87,19 @@ public class Enemy : MonoBehaviour
                 {
                     case 1:
                         GameManager.Instance.SceneChange("StageLoading");
+                        stage.enabled = false;
                         break;
                     case 2:
                         GameManager.Instance.SceneChange("StageLoading");
+                        stage.enabled = false;
                         break;
                     case 3:
                         GameManager.Instance.SceneChange("StageLoading");
+                        stage.enabled = false;
                         break;
                     case 4:
                         GameManager.Instance.SceneChange("Ending");
+                        stage.enabled = false;
                         break;
                 }
             }
