@@ -2,7 +2,7 @@
 First Makit Game.
 This game is for end of pandemic.
 
-Genre: Clicker
+Genre: Clicker<br>
 Developer: Teddy and Rene
 
 <img src="https://github.com/TeddyUm/Unity_Makit_ClickerPendemic_Repo/blob/master/1676531402416.jpg" width="800" height="500">
